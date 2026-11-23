@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karaoke Player</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        [hidden] {
+            display: none !important;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: radial-gradient(circle at 50% 35%, #0f2a19 0%, #050505 70%);
+            color: #ffffff;
+            overflow: hidden;
+            cursor: default;
+        }
+
+        .stage {
+            height: 100%;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            gap: 2vh;
+            padding: 3vh 4vw;
+        }
+
+        .now {
+            display: flex;
+            align-items: center;
+            gap: 1.2vw;
+            min-height: 7vh;
+        }
+
+        .now img {
+            width: clamp(48px, 8vh, 96px);
+            height: clamp(48px, 8vh, 96px);
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .now-title {
+            font-size: clamp(18px, 3vh, 34px);
+            font-weight: 700;
+        }
+
+        .now-artist {
+            font-size: clamp(14px, 2.2vh, 26px);
+            color: #b3b3b3;
+        }
+
+        .now-key {
+            margin-left: auto;
+            color: #1DB954;
+            font-size: clamp(14px, 2.2vh, 26px);
+            text-align: right;
+        }
+
+        .lyrics-stage {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3vh;
+            text-align: center;
+        }
+
+        .lyrics-current {
+            max-width: 92vw;
+            min-height: 1.25em;
+            font-size: clamp(28px, 7vh, 88px);
+            font-weight: 800;
+            line-height: 1.25;
+        }
+
+        .lyrics-next {
+            max-width: 92vw;
+            min-height: 1.25em;
+            font-size: clamp(18px, 4vh, 48px);
+            line-height: 1.25;
+            color: rgba(255, 255, 255, 0.35);
+        }
+
+        /* Karaoke wipe: --p goes from 0 to 1 while the word is sung */
+        .lyric-word {
+            --p: 0;
+            background: linear-gradient(90deg, #1DB954 calc(var(--p) * 100%), rgba(255, 255, 255, 0.6) calc(var(--p) * 100%));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .lyrics-countdown {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(44px, 9vh, 100px);
+            height: clamp(44px, 9vh, 100px);
+            border-radius: 50%;
+            background: #1DB954;
+            color: #000;
+            font-size: clamp(22px, 4.5vh, 50px);
+            font-weight: 800;
+        }
+
+        .message {
+            font-size: clamp(22px, 5vh, 60px);
+            font-weight: 700;
+            color: #d0d0d0;
+        }
+
+        .message small {
+            display: block;
+            margin-top: 1.5vh;
+            font-size: 0.5em;
+            font-weight: 400;
+            color: #8a8a8a;
+        }
+
+        .start-prompt {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.6vh;
+        }
+
+        .start-prompt img {
+            width: clamp(120px, 26vh, 300px);
+            height: clamp(120px, 26vh, 300px);
+            margin-bottom: 1vh;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 16px 50px rgba(0, 0, 0, 0.6);
+        }
+
+        .prompt-label {
+            font-size: clamp(14px, 2.4vh, 28px);
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #1DB954;
+        }
+
+        .prompt-title {
+            max-width: 90vw;
+            font-size: clamp(28px, 6.5vh, 80px);
+            font-weight: 800;
+            line-height: 1.15;
+        }
+
+        .prompt-artist {
+            font-size: clamp(18px, 3.4vh, 40px);
+            color: #b3b3b3;
+        }
+
+        .prompt-action {
+            margin-top: 2vh;
+            font-size: clamp(16px, 2.8vh, 32px);
+            color: #d0d0d0;
+            animation: pulse 1.6s ease-in-out infinite;
+        }
+
+        kbd {
+            padding: 0.15em 0.6em;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-bottom-width: 3px;
+            border-radius: 8px;
+            font-family: inherit;
+            font-weight: 700;
+        }
+
+        @keyframes pulse {
+            50% {
+                opacity: 0.45;
+            }
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2vh;
+        }
+
+        .progress {
+            height: 6px;
+            border-radius: 3px;
+            background: rgba(255, 255, 255, 0.12);
+            overflow: hidden;
+        }
+
+        .progress div {
+            width: 0;
+            height: 100%;
+            background: #1DB954;
+        }
+
+        /* QR code of the guest page: small in the corner while singing, large when the queue is empty */
+        .invite {
+            --qr: clamp(80px, 15vh, 180px);
+            position: fixed;
+            right: 4vw;
+            bottom: calc(3vh + clamp(13px, 2vh, 24px) * 1.4 + 6px + 2.4vh);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8vh;
+            font-size: clamp(11px, 1.6vh, 20px);
+            color: #b3b3b3;
+        }
+
+        .invite img {
+            width: var(--qr);
+            height: var(--qr);
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        body.has-invite .lyrics-stage {
+            padding: 0 calc(clamp(80px, 15vh, 180px) + 2vw);
+        }
+
+        .invite.large {
+            --qr: clamp(160px, 38vh, 440px);
+            position: static;
+            font-size: clamp(16px, 2.8vh, 32px);
+        }
+
+        .footer-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 2vw;
+            font-size: clamp(13px, 2vh, 24px);
+            color: #8a8a8a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stage">
+        <header class="now">
+            <img id="cover" alt="" hidden>
+            <div>
+                <div class="now-title" id="title"></div>
+                <div class="now-artist" id="artist"></div>
+            </div>
+            <div class="now-key" id="key"></div>
+        </header>
+
+        <main class="lyrics-stage">
+            <div class="start-prompt" id="start-prompt" hidden>
+                <img id="prompt-cover" alt="" hidden>
+                <div class="prompt-label" id="prompt-label">Next up</div>
+                <div class="prompt-title" id="prompt-title"></div>
+                <div class="prompt-artist" id="prompt-artist"></div>
+                <div class="prompt-action" id="prompt-action"></div>
+            </div>
+            <p class="message" id="message" hidden></p>
+            <div class="invite" id="invite" hidden>
+                <img id="invite-qr" alt="QR code to add songs">
+                <span>Scan to add songs</span>
+            </div>
+            <div class="lyrics-countdown" id="countdown" hidden></div>
+            <p class="lyrics-current" id="lyrics-current"></p>
+            <p class="lyrics-next" id="lyrics-next"></p>
+        </main>
+
+        <footer>
+            <div class="progress"><div id="progress"></div></div>
+            <div class="footer-row">
+                <span id="lyrics-info"></span>
+                <span id="up-next"></span>
+            </div>
+        </footer>
+    </div>
+
+    <audio id="original" preload="auto"></audio>
+    <audio id="instrumental" preload="auto"></audio>
+    <audio id="vocals" preload="auto"></audio>
+
+    <script src="/static/lyrics.js"></script>
+    <script>
+        const $ = id => document.getElementById(id);
+        const audio = { original: $('original'), instrumental: $('instrumental'), vocals: $('vocals') };
+
+        const STATUS_TEXT = {
+            queued: 'Waiting to be prepared...',
+            downloading: 'Downloading...',
+            analyzing: 'Detecting key...',
+            separating: 'Separating vocals...',
+            lyrics: 'Syncing lyrics...',
+        };
+        const MODE_NAMES = { karaoke: '🎤 Karaoke', hardcore: '🔥 Hardcore', boring: '😴 Boring', drunk: '🍻 Drunk', custom: '🎛️ Custom' };
+        const MAJOR_KEYS = ['C major', 'C# major', 'D major', 'D# major', 'E major', 'F major',
+            'F# major', 'G major', 'G# major', 'A major', 'A# major', 'B major'];
+        const MINOR_KEYS = ['A minor', 'A# minor', 'B minor', 'C minor', 'C# minor', 'D minor',
+            'D# minor', 'E minor', 'F minor', 'F# minor', 'G minor', 'G# minor'];
+        const JSON_HEADERS = { 'Content-Type': 'application/json' };
+
+        let lastState = null;
+        // Audio is only allowed after a key press or click on this page.
+        let unlocked = false;
+        let audioContext = null;
+        const gains = {};
+        let midiOutput = null;
+        let loadedItemId = null;
+        let lyricsLoaded = false;
+        // 'original' (Boring mode) or 'stems' (instrumental + vocals)
+        let activeSource = null;
+        let appliedSeekSeq = null;
+        let sentKey = null;
+        let lyricsKey = null;
+
+        function master() {
+            return activeSource === 'original' ? audio.original : audio.instrumental;
+        }
+
+        function activeElements() {
+            if (activeSource === 'original') return [audio.original];
+            if (activeSource === 'stems') return [audio.instrumental, audio.vocals];
+            return [];
+        }
+
+        const lyricsView = createLyricsView({
+            current: $('lyrics-current'),
+            next: $('lyrics-next'),
+            countdown: $('countdown'),
+            getTime: () => master().currentTime,
+        });
+
+        function unlockAudio() {
+            if (unlocked) return;
+            unlocked = true;
+
+            // Route every track through a gain node, so levels can go above 0 dB.
+            audioContext = new AudioContext();
+            for (const [name, element] of Object.entries(audio)) {
+                gains[name] = audioContext.createGain();
+                audioContext.createMediaElementSource(element).connect(gains[name]).connect(audioContext.destination);
+            }
+
+            if (navigator.requestMIDIAccess) {
+                navigator.requestMIDIAccess().then(midi => {
+                    const outputs = [...midi.outputs.values()];
+                    midiOutput = outputs.find(o => o.name.includes('IAC')) || outputs[0] || null;
+                }).catch(e => console.warn('MIDI not available', e));
+            }
+        }
+
+        async function startPressed() {
+            unlockAudio();
+            const item = lastState?.current;
+            if (!item || item.status !== 'ready') return;
+
+            if (lastState.started) {
+                apply(lastState);  // resume after reloading the page
+                return;
+            }
+            const resp = await fetch('/api/start', { method: 'POST', headers: JSON_HEADERS, body: JSON.stringify({ item_id: item.id }) });
+            apply(await resp.json());
+        }
+
+        document.addEventListener('keydown', e => {
+            if (e.code === 'Space') {
+                e.preventDefault();
+                if (!e.repeat) startPressed();
+            }
+        });
+        document.addEventListener('click', startPressed);
+
+        function showMessage(text, hint) {
+            const el = $('message');
+            el.hidden = !text;
+            el.replaceChildren(text || '');
+            if (hint) {
+                const small = document.createElement('small');
+                small.textContent = hint;
+                el.append(small);
+            }
+        }
+
+        function showPrompt(item, resume) {
+            $('start-prompt').hidden = !item;
+            if (!item) return;
+
+            $('prompt-label').textContent = resume ? 'Paused' : 'Next up';
+            $('prompt-title').textContent = item.title;
+            $('prompt-artist').textContent = `${item.artist} · ${MODE_NAMES[item.mix.mode] || ''}`;
+            $('prompt-cover').hidden = !item.cover;
+            if (item.cover && $('prompt-cover').getAttribute('src') !== item.cover) {
+                $('prompt-cover').src = item.cover;
+            }
+            $('prompt-action').replaceChildren('Press ', Object.assign(document.createElement('kbd'), { textContent: 'Space' }),
+                resume ? ' or click to continue' : ' or click to start');
+        }
+
+        // The QR carries an invite code that changes over time, so it follows state.guest_url.
+        function renderInvite(guestUrl, large) {
+            const invite = $('invite');
+            invite.hidden = !guestUrl;
+            document.body.classList.toggle('has-invite', !!guestUrl && !large);
+            if (!guestUrl) return;
+
+            invite.classList.toggle('large', large);
+            // Next to the message when the queue is empty, in the corner otherwise.
+            const home = large ? $('message').parentElement : document.body;
+            if (invite.parentElement !== home) home.append(invite);
+            const src = '/api/guest-qr?u=' + encodeURIComponent(guestUrl);
+            if ($('invite-qr').getAttribute('src') !== src) $('invite-qr').src = src;
+        }
+
+        function showLyrics(visible) {
+            for (const id of ['lyrics-current', 'lyrics-next', 'countdown']) {
+                $(id).style.visibility = visible ? '' : 'hidden';
+            }
+        }
+
+        function stopAll() {
+            for (const element of Object.values(audio)) {
+                element.pause();
+                element.removeAttribute('src');
+                element.load();
+            }
+            activeSource = null;
+            lyricsLoaded = false;
+        }
+
+        function setSource(element, url) {
+            if (url && element.getAttribute('src') !== url) {
+                element.src = url;
+            }
+        }
+
+        function clearLyrics() {
+            lyricsKey = null;
+            lyricsView.setLyrics(null);
+            $('lyrics-info').textContent = '';
+        }
+
+        function applyMix(mix, muteDb) {
+            if (!audioContext) return;
+            const now = audioContext.currentTime;
+            for (const name of Object.keys(audio)) {
+                const db = mix[name + '_db'];
+                const gain = db <= muteDb ? 0 : 10 ** (db / 20);
+                gains[name].gain.setTargetAtTime(gain, now, 0.05);
+            }
+        }
+
+        // Sends the song key as MIDI notes, e.g. to set up a harmonizer.
+        function sendKey(key) {
+            if (!midiOutput || !key) return;
+            const keys = key.includes('major') ? MAJOR_KEYS : MINOR_KEYS;
+            const index = keys.indexOf(key);
+            if (index < 0) return;
+
+            for (const octave of [2, 3]) {
+                const note = index + (octave + 2) * 12;
+                midiOutput.send([0x90, note, 127]);
+                setTimeout(() => midiOutput.send([0x80, note, 0]), 500);
+            }
+        }
+
+        async function loadLyrics(key) {
+            lyricsKey = key;
+            try {
+                const data = await (await fetch('/api/lyrics/' + encodeURIComponent(key))).json();
+                if (lyricsKey !== key) return;
+
+                if (data.status === 'ok') {
+                    lyricsView.setLyrics(data);
+                    $('lyrics-info').textContent = lyricsStatusText(data);
+                } else {
+                    lyricsView.setLyrics(null);
+                    $('lyrics-info').textContent = data.status === 'instrumental' ? 'Instrumental' : 'No lyrics found';
+                }
+            } catch (e) {
+                if (lyricsKey === key) {
+                    setTimeout(() => loadLyrics(key), 3000);
+                }
+            }
+        }
+
+        function renderNowPlaying(item) {
+            $('title').textContent = item ? item.title : '';
+            $('artist').textContent = item ? `${item.artist} · ${MODE_NAMES[item.mix.mode] || ''}` : '';
+            $('cover').hidden = !item?.cover;
+            if (item?.cover && $('cover').getAttribute('src') !== item.cover) {
+                $('cover').src = item.cover;
+            }
+        }
+
+        function apply(state) {
+            lastState = state;
+            lyricsView.setOffset(state.settings.lyrics_offset);
+
+            const upNext = state.queue[0];
+            $('up-next').textContent = upNext ? `Up next: ${upNext.title} – ${upNext.artist}` : '';
+
+            const item = state.current;
+            renderNowPlaying(item);
+            renderInvite(state.guest_url, !item);
+
+            if (!item) {
+                if (loadedItemId) {
+                    stopAll();
+                    clearLyrics();
+                    loadedItemId = null;
+                }
+                $('key').textContent = '';
+                showPrompt(null);
+                // With a guest URL the QR below the message says where to add songs.
+                showMessage('Queue is empty', state.guest_url ? '' : `Add songs at http://${location.hostname}:${state.guest_port}`);
+                return;
+            }
+
+            if (item.id !== loadedItemId) {
+                stopAll();
+                clearLyrics();
+                loadedItemId = item.id;
+                sentKey = null;
+            }
+
+            if (item.status !== 'ready') {
+                activeElements().forEach(element => element.pause());
+                if (lyricsLoaded) {
+                    clearLyrics();
+                    lyricsLoaded = false;
+                }
+                $('key').textContent = '';
+                showPrompt(null);
+                showMessage(STATUS_TEXT[item.status] || 'Preparing...', `${item.title} – ${item.artist}`);
+                return;
+            }
+            showMessage('');
+
+            // Load every track that exists, the mix decides which ones play.
+            setSource(audio.original, item.original);
+            setSource(audio.instrumental, item.no_vocals);
+            setSource(audio.vocals, item.vocals);
+            if (!lyricsLoaded) {
+                lyricsLoaded = true;
+                appliedSeekSeq = state.seek_seq;
+                loadLyrics(item.key);
+            }
+            applyMix(item.mix, state.mix.mute_db);
+
+            // Switching between original and stems keeps the position.
+            const source = item.mix.mode === 'boring' ? 'original' : 'stems';
+            if (source !== activeSource) {
+                const position = activeSource ? master().currentTime : 0;
+                activeElements().forEach(element => element.pause());
+                activeSource = source;
+                activeElements().forEach(element => { element.currentTime = position; });
+            }
+
+            if (state.seek_seq !== appliedSeekSeq) {
+                appliedSeekSeq = state.seek_seq;
+                activeElements().forEach(element => { element.currentTime = 0; });
+            }
+
+            // Every song waits for Space or a click before it starts.
+            const waiting = !state.started || !unlocked;
+            showPrompt(waiting ? item : null, state.started);
+            showLyrics(!waiting);
+
+            const shouldPlay = !waiting && !state.paused;
+            if (shouldPlay && master().paused && !master().ended) {
+                audioContext.resume();
+                activeElements().forEach(element => element.play().catch(() => {}));
+            } else if (!shouldPlay && !master().paused) {
+                activeElements().forEach(element => element.pause());
+            }
+
+            const key = state.settings.key || item.scale;
+            $('key').textContent = key || '';
+            if (unlocked && key !== sentKey) {
+                sentKey = key;
+                sendKey(key);
+            }
+        }
+
+        async function sync() {
+            try {
+                const resp = await fetch('/api/sync', {
+                    method: 'POST',
+                    headers: JSON_HEADERS,
+                    body: JSON.stringify({
+                        item_id: loadedItemId,
+                        position: master().currentTime || 0,
+                        duration: master().duration || 0,
+                        playing: !master().paused,
+                        unlocked,
+                    }),
+                });
+                apply(await resp.json());
+            } catch (e) {
+                showMessage('Connection lost', 'Retrying...');
+            } finally {
+                setTimeout(sync, 500);
+            }
+        }
+
+        for (const element of [audio.original, audio.instrumental]) {
+            element.addEventListener('ended', () => {
+                if (element !== master()) return;
+                fetch('/api/ended', { method: 'POST', headers: JSON_HEADERS, body: JSON.stringify({ item_id: loadedItemId }) });
+            });
+        }
+
+        function tick() {
+            const duration = master().duration;
+            $('progress').style.width = duration ? (master().currentTime / duration * 100) + '%' : '0';
+
+            // Keep the guide vocals in sync with the instrumental.
+            if (activeSource === 'stems' && !audio.instrumental.paused && !audio.vocals.seeking &&
+                Math.abs(audio.vocals.currentTime - audio.instrumental.currentTime) > 0.08) {
+                audio.vocals.currentTime = audio.instrumental.currentTime;
+            }
+            requestAnimationFrame(tick);
+        }
+
+        requestAnimationFrame(tick);
+        sync();
+    </script>
+</body>
+
+</html>

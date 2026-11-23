@@ -1,0 +1,937 @@
+{
+ "work": "Johannes-Passion",
+ "composer": "Johann Sebastian Bach",
+ "catalog": "BWV 245",
+ "source": "https://www.bach-cantatas.com/Texts/BWV245-Eng3P.htm",
+ "title_patterns": [
+  "BWV\\s*245",
+  "Johannes-?\\s*[Pp]assion",
+  "St\\.? John Passion"
+ ],
+ "movements": [
+  {
+   "number": "1",
+   "part": 1,
+   "kind": "Chorus",
+   "lines": [
+    "Herr, unser Herrscher, dessen Ruhm",
+    "In allen Landen herrlich ist!",
+    "Zeig uns durch deine Passion,",
+    "Dass du, der wahre Gottessohn,",
+    "Zu aller Zeit,",
+    "Auch in der größten Niedrigkeit,",
+    "Verherrlicht worden bist!"
+   ]
+  },
+  {
+   "number": "2a",
+   "part": 1,
+   "kind": "Recitative",
+   "lines": [
+    "Jesus ging mit seinen Jüngern",
+    "über den Bach Kidron,",
+    "da war ein Garten,",
+    "darein ging Jesus und seine Jünger.",
+    "Judas aber, der ihn verriet,",
+    "wusste den Ort auch,",
+    "denn Jesus versammlete sich oft daselbst",
+    "mit seinen Jüngern.",
+    "Da nun Judas zu sich hatte genommen",
+    "die Schar und der Hohenpriester",
+    "und Pharisäer Diener,",
+    "kommt er dahin mit Fackeln,",
+    "Lampen und mit Waffen.",
+    "Als nun Jesus wusste alles,",
+    "was ihm begegnen sollte,",
+    "ging er hinaus und sprach zu ihnen:",
+    "Wen suchet ihr?",
+    "Sie antworteten ihm:",
+    "2b. Chorus",
+    "Jesum von Nazareth.",
+    "2c. Recitative",
+    "Jesus spricht zu ihnen:",
+    "Ich bin's.",
+    "Judas aber, der ihn verriet,",
+    "stund auch bei ihnen.",
+    "Als nun Jesus zu ihnen sprach: Ich bin's,",
+    "wichen sie zurücke und fielen zu Boden.",
+    "Da fragete er sie abermal:",
+    "Wen suchet ihr?",
+    "Sie aber sprachen:",
+    "2d. Chorus",
+    "Jesum von Nazareth.",
+    "2e. Recitative",
+    "Ich hab's euch gesagt, dass ich's sei,",
+    "suchet ihr denn mich, so lasset diese gehen!"
+   ]
+  },
+  {
+   "number": "3",
+   "part": 1,
+   "kind": "Chorale",
+   "lines": [
+    "O große Lieb, o Lieb ohn alle Maße,",
+    "Die dich gebracht auf diese Marterstraße",
+    "Ich lebte mit der Welt in Lust und Freuden,",
+    "Und du musst leiden."
+   ]
+  },
+  {
+   "number": "4",
+   "part": 1,
+   "kind": "Recitative",
+   "lines": [
+    "Auf dass das Wort erfüllet würde,",
+    "welches er sagte:",
+    "Ich habe der keine verloren,",
+    "die du mir gegeben hast.",
+    "Da hatte Simon Petrus ein Schwert",
+    "und zog es aus und schlug nach",
+    "des Hohenpriesters Knecht",
+    "und hieb ihm sein recht Ohr ab;",
+    "und der Knecht hieß Malchus.",
+    "Da sprach Jesus zu Petro:",
+    "Stecke dein Schwert in die Scheide!",
+    "Soll ich den Kelch nicht trinken,",
+    "den mir mein Vater gegeben hat?"
+   ]
+  },
+  {
+   "number": "5",
+   "part": 1,
+   "kind": "Chorale",
+   "lines": [
+    "Dein Will gescheh, Herr Gott, zugleich",
+    "Auf Erden wie im Himmelreich.",
+    "Gib uns Geduld in Leidenszeit,",
+    "Gehorsam sein in Lieb und Leid;",
+    "Wehr und steur allem Fleisch und Blut,",
+    "Das wider deinen Willen tut!"
+   ]
+  },
+  {
+   "number": "6",
+   "part": 1,
+   "kind": "Recitative",
+   "lines": [
+    "Die Schar aber und der Oberhauptmann",
+    "und die Diener der Jüden",
+    "nahmen Jesum und bunden ihn",
+    "und führeten ihn aufs erste zu Hannas,",
+    "der war Kaiphas Schwäher,",
+    "welcher des Jahres Hoherpriester war.",
+    "Es war aber Kaiphas, der den Jüden riet,",
+    "es wäre gut, dass ein Mensch",
+    "würde umbracht für das Volk."
+   ]
+  },
+  {
+   "number": "7",
+   "part": 1,
+   "kind": "Aria",
+   "lines": [
+    "Von den Stricken meiner Sünden",
+    "Mich zu entbinden,",
+    "Wird mein Heil gebunden.",
+    "Mich von allen Lasterbeulen",
+    "Völlig zu heilen,",
+    "Läßt er sich verwunden."
+   ]
+  },
+  {
+   "number": "8",
+   "part": 1,
+   "kind": "Recitative",
+   "lines": [
+    "Simon Petrus aber folgete Jesu nach und ein ander Jünger."
+   ]
+  },
+  {
+   "number": "9",
+   "part": 1,
+   "kind": "Aria",
+   "lines": [
+    "Ich folge dir gleichfalls",
+    "mit freudigen Schritten",
+    "Und lasse dich nicht,",
+    "Mein Leben, mein Licht.",
+    "Befördre den Lauf",
+    "Und höre nicht auf,",
+    "Selbst an mir zu ziehen, zu schieben, zu bitten."
+   ]
+  },
+  {
+   "number": "10",
+   "part": 1,
+   "kind": "Recitative",
+   "lines": [
+    "Derselbige Jünger war dem Hohenpriester bekannt",
+    "und ging mit Jesu hinein in des Hohenpriesters Palast.",
+    "Petrus aber stund draußen für der Tür.",
+    "Da ging der andere Jünger, der dem Hohenpriester bekannt war, hinaus",
+    "und redete mit der Türhüterin und führete Petrum hinein.",
+    "Da sprach die Magd, die Türhüterin, zu Petro:",
+    "Bist du nicht dieses Menschen Jünger einer?",
+    "Ich bin's nicht.",
+    "Es stunden aber die Knechte und Diener",
+    "und hatten ein Kohlfeu'r gemacht",
+    "(denn es war kalt)",
+    "und wärmeten sich. Petrus aber stund bei ihnen und wärmete sich.",
+    "Aber der Hohepriester fragte Jesum um seine Jünger und um seine Lehre.",
+    "Jesus antwortete ihm:",
+    "Ich habe frei, öffentlich geredet für der Welt.",
+    "Ich habe allezeit gelehret in der Schule",
+    "und in dem Tempel,",
+    "da alle Jüden zusammenkommen,",
+    "und habe nichts im Verborgnen geredt.",
+    "Was fragest du mich darum?",
+    "Frage die darum, die gehöret haben,",
+    "was ich zu ihnen geredet habe!",
+    "Siehe, dieselbigen wissen, was ich gesaget habe.",
+    "Als er aber solches redete,",
+    "gab der Diener einer,die dabeistunden,",
+    "Jesu einen Backenstreich und sprach:",
+    "Solltest du dem Hohenpriester also antworten?",
+    "Jesus aber antwortete:",
+    "Hab ich übel geredt,",
+    "so beweise es, dass es böse sei,",
+    "hab ich aber recht geredt,",
+    "was schlägest du mich?"
+   ]
+  },
+  {
+   "number": "11",
+   "part": 1,
+   "kind": "Chorale",
+   "lines": [
+    "Wer hat dich so geschlagen,",
+    "Mein Heil, und dich mit Plagen",
+    "So übel zugericht'?",
+    "Du bist ja nicht ein Sünder",
+    "Wie wir und unsre Kinder,",
+    "Von Missetaten weißt du nicht.",
+    "Ich, ich und meine Sünden,",
+    "Die sich wie Körnlein finden",
+    "Des Sandes an dem Meer,",
+    "Die haben dir erreget",
+    "Das Elend, das dich schläget,",
+    "Und das betrübte Marterheer."
+   ]
+  },
+  {
+   "number": "12a",
+   "part": 1,
+   "kind": "Recitative",
+   "lines": [
+    "Und Hannas sandte ihn gebunden",
+    "zu dem Hohenpriester Kaiphas.",
+    "Simon Petrus stund und wärmete sich,",
+    "da sprachen sie zu ihm:"
+   ]
+  },
+  {
+   "number": "12b",
+   "part": 1,
+   "kind": "Chorus",
+   "lines": [
+    "Bist du nicht seiner Jünger einer?"
+   ]
+  },
+  {
+   "number": "12c",
+   "part": 1,
+   "kind": "Recitative",
+   "lines": [
+    "Er leugnete aber und sprach:",
+    "Ich bin's nicht.",
+    "Spricht des Hohenpriesters Knecht' einer,",
+    "ein Gefreundter des,",
+    "dem Petrus das Ohr abgehauen hatte:",
+    "Sahe ich dich nicht im Garten bei ihm?",
+    "Da verleugnete Petrus abermal,",
+    "und alsobald krähete der Hahn.",
+    "Da gedachte Petrus an die Worte Jesu und ging hinaus und weinete bitterlich."
+   ]
+  },
+  {
+   "number": "13",
+   "part": 1,
+   "kind": "Aria Tenor",
+   "lines": [
+    "Ach, mein Sinn,",
+    "Wo willt du endlich hin,",
+    "Wo soll ich mich erquicken?",
+    "Bleib ich hier,",
+    "Oder wünsch ich mir",
+    "Berg und Hügel auf den Rücken?",
+    "Bei der Welt ist gar kein Rat,",
+    "Und im Herzen",
+    "Stehn die Schmerzen",
+    "Meiner Missetat,",
+    "Weil der Knecht den Herrn verleugnet hat."
+   ]
+  },
+  {
+   "number": "14",
+   "part": 1,
+   "kind": "Chorale",
+   "lines": [
+    "Petrus, der nicht denkt zurück,",
+    "Seinen Gott verneinet,",
+    "Der doch auf ein' ernsten Blick",
+    "Bitterlichen weinet.",
+    "Jesu, blicke mich auch an,",
+    "Wenn ich nicht will büßen;",
+    "Wenn ich Böses hab getan,|",
+    "Rühre mein Gewissen!"
+   ]
+  },
+  {
+   "number": "15",
+   "part": 2,
+   "kind": "Chorale",
+   "lines": [
+    "Christus, der uns selig macht,",
+    "Kein Bös' hat begangen,",
+    "Der ward für uns in der Nacht",
+    "Als ein Dieb gefangen,",
+    "Geführt für gottlose Leut",
+    "Und fälschlich verklaget,",
+    "Verlacht, verhöhnt und verspeit,",
+    "Wie denn die Schrift saget."
+   ]
+  },
+  {
+   "number": "16a",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Da führeten sie Jesum von Kaiphas",
+    "vor das Richthaus, und es war frühe.",
+    "Und sie gingen nicht in das Richthaus,",
+    "auf dass sie nicht unrein würden,",
+    "sondern Ostern essen möchten.",
+    "Da ging Pilatus zu ihnen heraus und sprach:",
+    "Was bringet ihr für Klage",
+    "wider diesen Menschen?",
+    "Sie antworteten und sprachen zu ihm:"
+   ]
+  },
+  {
+   "number": "16b",
+   "part": 2,
+   "kind": "Chorus",
+   "lines": [
+    "Wäre dieser nicht ein Übeltäter,",
+    "wir hätten dir ihn nicht überantwortet."
+   ]
+  },
+  {
+   "number": "16c",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Da sprach Pilatus zu ihnen:",
+    "So nehmet ihr ihn hin",
+    "und richtet ihn nach eurem Gesetze!",
+    "Da sprachen die Jüden zu ihm:"
+   ]
+  },
+  {
+   "number": "16d",
+   "part": 2,
+   "kind": "Chorus",
+   "lines": [
+    "Wir dürfen niemand töten."
+   ]
+  },
+  {
+   "number": "16e",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Auf dass erfüllet würde das Wort Jesu, welches er sagte, da er deutete,",
+    "welches Todes er sterben würde.",
+    "Da ging Pilatus wieder hinein",
+    "in das Richthaus",
+    "und rief Jesu und sprach zu ihm:",
+    "Bist du der Jüden König?",
+    "Redest du das von dir selbst,",
+    "oder haben's dir andere von mir gesagte",
+    "Bin ich ein Jüde? Dein Volk",
+    "und die Hohenpriester",
+    "haben dich mir überantwortet;",
+    "was hast du getan?",
+    "Mein Reich ist nicht von dieser Welt;",
+    "wäre mein Reich von dieser Welt,",
+    "meine Diener würden darob kämpfen, dass ich den Jüden nicht überantwortet würde;",
+    "aber nun ist mein Reich nicht von dannen."
+   ]
+  },
+  {
+   "number": "17",
+   "part": 2,
+   "kind": "Chorale",
+   "lines": [
+    "Ach großer König, groß zu allen Zeiten,",
+    "Wie kann ich gnugsam",
+    "diese Treu ausbreiten?",
+    "Keins Menschen Herze mag indes ausdenken,",
+    "Was dir zu schenken.",
+    "Ich kann's mit meinen Sinnen nicht erreichen,",
+    "Womit doch dein Erbarmen zu vergleichen.",
+    "Wie kann ich dir denn deine Liebestaten",
+    "Im Werk erstatten?"
+   ]
+  },
+  {
+   "number": "18a",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Da sprach Pilatus zu ihm:",
+    "So bist du dennoch ein König?",
+    "Du sagst's, ich bin ein König.",
+    "Ich bin dazu geboren",
+    "und in die Welt kommen,",
+    "dass ich die Wahrheit zeugen soll.",
+    "Wer aus der Wahrheit ist,",
+    "der höret meine Stimme.|",
+    "Spricht Pilatus zu ihm:",
+    "Was ist Wahrheit?",
+    "Und da er das gesaget,",
+    "ging er wieder hinaus zu den Jüden",
+    "und spricht zu ihnen:",
+    "Ich finde keine Schuld an ihm."
+   ]
+  },
+  {
+   "number": "18b",
+   "part": 2,
+   "kind": "Chorus",
+   "lines": [
+    "Nicht diesen, sondern Barrabam!"
+   ]
+  },
+  {
+   "number": "18c",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Barrabas aber war ein Mörder.",
+    "Da nahm Pilatus Jesum und geißelte ihn."
+   ]
+  },
+  {
+   "number": "19",
+   "part": 2,
+   "kind": "Arioso Bass",
+   "lines": [
+    "Betrachte, meine Seel,",
+    "mit ängstlichem Vergnügen,",
+    "Mit bittrer Lust",
+    "und halb beklemmtem Herzen",
+    "Dein höchstes Gut in Jesu Schmerzen,",
+    "Wie dir auf Dornen, so ihn stechen,",
+    "Die Himmelsschlüsselblumen blühn!",
+    "Du kannst viel süße Frucht",
+    "von seiner Wermut brechen",
+    "Drum sieh ohn Unterlass auf ihn!"
+   ]
+  },
+  {
+   "number": "20",
+   "part": 2,
+   "kind": "Aria Tenor",
+   "lines": [
+    "Erwäge, wie sein blutgefärbter Rücken",
+    "In allen Stücken",
+    "Dem Himmel gleiche geht,",
+    "Daran, nachdem die Wasserwogen",
+    "Von unsrer Sündflut sich verzogen,",
+    "Der allerschönste Regenbogen",
+    "Als Gottes Gnadenzeichen steht!"
+   ]
+  },
+  {
+   "number": "21a",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Und die Kriegsknechte flochten",
+    "eine Krone von Dornen",
+    "und satzten sie auf sein Haupt",
+    "und legten ihm ein Purpurkleid an",
+    "und sprachen:"
+   ]
+  },
+  {
+   "number": "21b",
+   "part": 2,
+   "kind": "Chorus",
+   "lines": [
+    "Sei gegrüßet, lieber Jüdenkönig!"
+   ]
+  },
+  {
+   "number": "21c",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Und gaben ihm Backenstreiche.",
+    "Da ging Pilatus wieder heraus",
+    "und sprach zu ihnen:",
+    "Sehet, ich führe ihn heraus zu euch,",
+    "dass ihr erkennet,",
+    "dass ich keine Schuld an ihm finde.",
+    "Also ging Jesus heraus und trug eine Dornenkrone und Purpurkleid.",
+    "Und er sprach zu ihnen:",
+    "Sehet, welch ein Mensch!",
+    "Da ihn die Hohenpriester und die Diener sahen, schrieen sie und sprachen:"
+   ]
+  },
+  {
+   "number": "21d",
+   "part": 2,
+   "kind": "Chorus",
+   "lines": [
+    "Kreuzige, kreuzige!",
+    "Crucify him,crucify him!"
+   ]
+  },
+  {
+   "number": "21e",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Pilatus sprach zu ihnen:",
+    "Nehmet ihr ihn hin und kreuziget ihn;",
+    "denn ich finde keine Schuld an ihm!",
+    "Die Jüden antworteten ihm:"
+   ]
+  },
+  {
+   "number": "21f",
+   "part": 2,
+   "kind": "Chorus",
+   "lines": [
+    "Wir haben ein Gesetz,",
+    "und nach dem Gesetz soll er sterben;",
+    "denn er hat sich selbst",
+    "zu Gottes Sohn gemacht."
+   ]
+  },
+  {
+   "number": "21g",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Da Pilatus das Wort hörete, fürchtet' er sich noch mehr",
+    "und ging wieder hinein in das Richthaus und spricht zu Jesu:",
+    "Von wannen bist du?",
+    "Aber Jesus gab ihm keine Antwort. Da sprach Pilatus zu ihm:",
+    "Redest du nicht mit mir ?",
+    "Weißest du nicht, dass ich Macht habe, dich zu kreuzigen,",
+    "und Macht habe, dich loszugehen ?",
+    "Du hättest keine Macht über mich,",
+    "wenn sie dir nicht wäre von oben herab gegeben;",
+    "darum, der mich dir überantwortet hat, der hat's größ're Sünde.",
+    "Von dem an trachtete Pilatus, wie er ihn losließe."
+   ]
+  },
+  {
+   "number": "22",
+   "part": 2,
+   "kind": "Chorale",
+   "lines": [
+    "Durch dein Gefängnis, Gottes Sohn,",
+    "Muß uns die Freiheit kommen;",
+    "Dein Kerker ist der Gnadenthron,",
+    "Die Freistatt aller Frommen;",
+    "Denn gingst du nicht die Knechtschaft ein,",
+    "Müßt unsre Knechtschaft ewig sein."
+   ]
+  },
+  {
+   "number": "23a",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Die Jüden aber schrieen und sprachen:"
+   ]
+  },
+  {
+   "number": "23b",
+   "part": 2,
+   "kind": "Chorus",
+   "lines": [
+    "Lässest du diesen los, so bist du des Kaisers Freund nicht;",
+    "denn wer sich zum Könige machet, der ist wider den Kaiser."
+   ]
+  },
+  {
+   "number": "23c",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Da Pilatus das Wort hörete, führete er Jesum heraus",
+    "und satzte sich auf den Richtstuhl, an der Stätte, die da heißet:",
+    "Hochpflaster, auf Ebräisch aber: Gabbatha.",
+    "Es war aber der Rüsttag in Ostern um die sechste Stunde,",
+    "und er spricht zu den Jüden:",
+    "Sehet, das ist euer König!",
+    "Sie schrieen aber:"
+   ]
+  },
+  {
+   "number": "23d",
+   "part": 2,
+   "kind": "Chorus",
+   "lines": [
+    "Weg, weg mit dem, kreuzige ihn!"
+   ]
+  },
+  {
+   "number": "23e",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Spricht Pilatus zu ihnen:",
+    "Soll ich euren König kreuzigen?",
+    "Die Hohenpriester antworteten:"
+   ]
+  },
+  {
+   "number": "23f",
+   "part": 2,
+   "kind": "Chorus",
+   "lines": [
+    "Wir haben keinen König denn den Kaiser."
+   ]
+  },
+  {
+   "number": "23g",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Da überantwortete er ihn, dass er gekreuziget würde.",
+    "Sie nahmen aber Jesum und führeten ihn hin.",
+    "Und er trug sein Kreuz und ging hinaus zur Stätte,",
+    "die da heißet Schädelstätt, welche heißet auf Ebräisch: Golgatha."
+   ]
+  },
+  {
+   "number": "24",
+   "part": 2,
+   "kind": "Aria B e Coro",
+   "lines": [
+    "Eilt, ihr angefochtnen Seelen,",
+    "Geht aus euren Marterhöhlen,",
+    "Eilt - Wohin ? - nach Golgatha!",
+    "Nehmet an des Glaubens Flügel,",
+    "Flieht - Wohin? - zum Kreuzeshügel,",
+    "Eure Wohlfahrt blüht allda!"
+   ]
+  },
+  {
+   "number": "25a",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Allda kreuzigten sie ihn, und mit ihm zween andere zu beiden Seiten,",
+    "Jesum aber mitten inne.",
+    "Pilatus aber schrieb eine Überschrift und satzte sie auf das Kreuz,",
+    "und war geschrieben: \"Jesus von Nazareth, der Jüden König\".",
+    "Diese Überschrift lasen viel Jüden,",
+    "denn die Stätte war nahe bei der Stadt,",
+    "da Jesus gekreuziget ist.",
+    "Und es war geschrieben auf ebräische, griechische und lateinische Sprache.",
+    "Da sprachen die Hohenpriester der Jüden zu Pilato:"
+   ]
+  },
+  {
+   "number": "25b",
+   "part": 2,
+   "kind": "Chorus",
+   "lines": [
+    "Schreibe nicht: der Jüden König, sondern dass er gesaget habe: Ich bin der Jüden König."
+   ]
+  },
+  {
+   "number": "25c",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Was ich geschrieben habe, das habe ich geschrieben."
+   ]
+  },
+  {
+   "number": "26",
+   "part": 2,
+   "kind": "Chorale",
+   "lines": [
+    "In meines Herzens Grunde",
+    "Dein Nam und Kreuz allein",
+    "Funkelt all Zeit und Stunde,",
+    "Drauf kann ich fröhlich sein.",
+    "Erschein mir in dem Bilde",
+    "Zu Trost in meiner Not,",
+    "Wie du, Herr Christ, so milde",
+    "Dich hast geblut' zu Tod"
+   ]
+  },
+  {
+   "number": "27a",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Die Kriegsknechte aber, da sie Jesum gekreuziget hatten,",
+    "nahmen seine Kleider und machten vier Teile,",
+    "einem jeglichen Kriegesknechte sein Teil, dazu auch den Rock.",
+    "Der Rock aber war ungenähet, von oben an gewürket durch und durch.",
+    "Da sprachen sie untereinander:"
+   ]
+  },
+  {
+   "number": "27b",
+   "part": 2,
+   "kind": "Chorus",
+   "lines": [
+    "Lasset uns den nicht zerteilen,",
+    "sondern darum losen, wes er sein soll."
+   ]
+  },
+  {
+   "number": "27c",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Auf dass erfüllet würde die Schrift,",
+    "die da saget:",
+    "Sie haben meine Kleider unter sich geteilet",
+    "und haben über meinen Rock das Los geworfen,",
+    "Solches taten die Kriegesknechte.",
+    "Es stund aber bei dem Kreuze Jesu",
+    "seine Mutter und seiner Mutter Schwester,",
+    "Maria, Kleophas Weib, und Maria Magdalena.",
+    "Da nun Jesus seine Mutter sahe",
+    "und den Jünger dabei stehen, den er lieb hatte,",
+    "spricht er zu seiner Mutter:",
+    "Weib, siehe, das ist dein Sohn!",
+    "Darnach spricht er zu dem Jünger:",
+    "Siehe, das ist deine Mutter!"
+   ]
+  },
+  {
+   "number": "28",
+   "part": 2,
+   "kind": "Chorale",
+   "lines": [
+    "Er nahm alles wohl in acht",
+    "In der letzten Stunde,",
+    "Seine Mutter noch bedacht,",
+    "Setzt ihr ein' Vormunde.",
+    "O Mensch, mache Richtigkeit,",
+    "Gott und Menschen liebe,",
+    "Stirb darauf ohn alles Leid,",
+    "Und dich nicht betrübe!"
+   ]
+  },
+  {
+   "number": "29",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Und von Stund an nahm sie der Jünger zu sich.",
+    "Darnach, als Jesus wusste, dass schon alles vollbracht war,",
+    "dass die Schrift erfüllet würde, spricht er:",
+    "Mich dürstet!",
+    "Da stund ein Gefäße voll Essigs.",
+    "Sie fülleten aber einen Schwamm mit Essig",
+    "und legten ihn um einen Isopen,",
+    "und hielten es ihm dar zum Munde.",
+    "Da nun Jesus den Essig genommen hatte, sprach er:",
+    "Es ist vollbracht!"
+   ]
+  },
+  {
+   "number": "30",
+   "part": 2,
+   "kind": "Aria",
+   "lines": [
+    "Es ist vollbracht!",
+    "O Trost vor die gekränkten Seelen!",
+    "Die Trauernacht",
+    "Läßt nun die letzte Stunde zählen.",
+    "Der Held aus Juda siegt mit Macht",
+    "Und schließt den Kampf.",
+    "Es ist vollbracht!"
+   ]
+  },
+  {
+   "number": "31",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Und neiget das Haupt und verschied."
+   ]
+  },
+  {
+   "number": "32",
+   "part": 2,
+   "kind": "Aria Bass and Chorus",
+   "lines": [
+    "Mein teurer Heiland, laß dich fragen,",
+    "da du nunmehr ans Kreuz geschlagen",
+    "und selbst gesagt: Es ist vollbracht,",
+    "bin ich vom Sterben frei gemacht?",
+    "Kann ich durch deine Pein und Sterben",
+    "das Himmelreich ererben?",
+    "Ist aller Welt Erlösung da?",
+    "Du kannst vor Schmerzen zwar nichts sagen;",
+    "doch neigest du das Haupt",
+    "und sprichst stillschweigend: ja",
+    "Jesu, der du warest tot,",
+    "lebest nun ohn Ende,",
+    "in der letzten Todesnot",
+    "nirgend mich hinwende",
+    "als zu dir, der mich versühnt,",
+    "O du lieber Herre!",
+    "Gib mir nur, was du verdient,",
+    "mehr ich nicht begehre!"
+   ]
+  },
+  {
+   "number": "33",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Und siehe da, der Vorhang im Tempel zerriss in zwei Stück von oben an bis unten aus.",
+    "Und die Erde erbebete,",
+    "und die Felsen zerrissen,",
+    "und die Gräber täten sich auf,",
+    "und stunden auf viel Leiber der Heiligen."
+   ]
+  },
+  {
+   "number": "34",
+   "part": 2,
+   "kind": "Arioso Tenor",
+   "lines": [
+    "Mein Herz, in dem die ganze Welt",
+    "Bei Jesu Leiden gleichfalls leidet,",
+    "Die Sonne sich in Trauer kleidet,",
+    "Der Vorhang reißt, der Fels zerfällt,",
+    "Die Erde bebt, die Gräber spalten,",
+    "Weil sie den Schöpfer sehn erkalten,",
+    "Was willst du deines Ortes tun?"
+   ]
+  },
+  {
+   "number": "35",
+   "part": 2,
+   "kind": "Aria",
+   "lines": [
+    "Zerfließe, mein Herze, in Fluten der Zähren",
+    "Dem Höchsten zu Ehren!",
+    "Erzähle der Welt und dem Himmel die Not:",
+    "Dein Jesus ist tot!"
+   ]
+  },
+  {
+   "number": "36",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Die Jüden aber,",
+    "dieweil es der Rüsttag war,",
+    "dass nicht die Leichname",
+    "am Kreuze blieben den Sabbat über",
+    "(denn desselbigen Sabbats Tag war sehr groß)",
+    "baten sie Pilatum, ihre Beine gebrochen",
+    "und sie abgenommen würden.",
+    "Da kamen die Kriegsknechte und brachen dem ersten die Beine und dem andern,",
+    "der mit ihm gekreuziget war.",
+    "Als sie aber zu Jesu kamen, da sie sahen, dass er schon gestorben war,",
+    "brachen sie ihm die Beine nicht;",
+    "sondern der Kriegsknechte einer eröffnete seine Seite mit einem Speer,",
+    "und alsobald ging Blut und Wasser heraus.",
+    "Und der das gesehen hat, der hat es bezeuget, und sein Zeugnis ist wahr,",
+    "und derselbige weiß, dass er die Wahrheit saget, auf dass ihr gläubet.",
+    "Denn solches ist geschehen,",
+    "auf dass die Schrift erfüllet würde:",
+    "\"Ihr sollet ihm kein Bein zerbrechen\".",
+    "Und abermal spricht eine andere Schrift:",
+    "\"Sie werden sehen, in welchen sie gestochen haben\"."
+   ]
+  },
+  {
+   "number": "37",
+   "part": 2,
+   "kind": "Chorale",
+   "lines": [
+    "O hilf, Christe, Gottes Sohn,",
+    "Durch dein bitter Leiden,",
+    "Dass wir dir stets untertan",
+    "All Untugend meiden,",
+    "Deinen Tod und sein Ursach",
+    "Fruchtbarlich bedenken,",
+    "Dafür, wiewohl arm und schwach,",
+    "Dir Dankopfer schenken!"
+   ]
+  },
+  {
+   "number": "38",
+   "part": 2,
+   "kind": "Recitative",
+   "lines": [
+    "Darnach bat Pilatum Joseph von Arimathia, der ein Jünger Jesu war",
+    "(doch heimlich aus Furcht vor den Jüden),",
+    "dass er möchte abnehmen den Leichnam Jesu. Und Pilatus erlaubete es.",
+    "Derowegen kam er",
+    "und nahm den Leichnam Jesu herab.",
+    "Es kam aber auch Nikodemus,",
+    "der vormals bei der Nacht zu Jesu kommen war,",
+    "und brachte Myrrhen und Aloen untereinander, bei hundert Pfunden.",
+    "Da nahmen sie den Leichnam Jesu und bunden ihn in Leinen Tücher mit Spezereien,",
+    "wie die Jüden pflegen zu begraben.",
+    "Es war aber an der Stätte, da er gekreuziget ward, ein Garten,",
+    "und im Garten ein neu Grab, in welches niemand je geleget war.",
+    "Daselbst hin legten sie Jesum, um des Rüsttags willen der Jüden,",
+    "dieweil das Grab nahe war."
+   ]
+  },
+  {
+   "number": "39",
+   "part": 2,
+   "kind": "Chorus",
+   "lines": [
+    "Ruht wohl, ihr heiligen Gebeine,",
+    "Die ich nun weiter nicht beweine,",
+    "Ruht wohl und bringt auch mich zur Ruh!",
+    "Das Grab, so euch bestimmet ist",
+    "Und ferner keine Not umschließt,",
+    "Macht mir den Himmel auf und schließt die Hölle zu."
+   ]
+  },
+  {
+   "number": "40",
+   "part": 2,
+   "kind": "Chorale",
+   "lines": [
+    "Ach Herr, lass dein lieb Engelein",
+    "Am letzten End die Seele mein",
+    "In Abrahams Schoß tragen,",
+    "Den Leib in seim Schlafkämmerlein",
+    "Gar sanft ohn eigne Qual und Pein",
+    "Ruhn bis am jüngsten Tage!",
+    "Alsdenn vom Tod erwecke mich,",
+    "Dass meine Augen sehen dich",
+    "In aller Freud, o Gottes Sohn,",
+    "Mein Heiland und Genadenthron!",
+    "Herr Jesu Christ, erhöre mich,",
+    "Ich will dich preisen ewiglich!"
+   ]
+  }
+ ]
+}

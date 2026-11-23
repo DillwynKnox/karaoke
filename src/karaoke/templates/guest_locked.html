@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karaoke</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: rgb(10, 10, 10);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .card {
+            max-width: 420px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: #1DB954;
+        }
+
+        p {
+            color: #b3b3b3;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>🎤 Karaoke</h1>
+        {% if expired %}
+        <p>This invite code has expired. Scan the QR code on the karaoke screen again to add songs.</p>
+        {% else %}
+        <p>Scan the QR code at the party or open the invite link to add songs.</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>

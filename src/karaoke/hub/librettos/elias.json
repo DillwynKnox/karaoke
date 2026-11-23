@@ -1,0 +1,814 @@
+{
+ "work": "Elias",
+ "composer": "Felix Mendelssohn Bartholdy",
+ "catalog": "Op. 70",
+ "source": "https://cdn.naxos.com/sharedfiles/PDF/8.572228-29_sungtext.pdf (German text)",
+ "title_patterns": [
+  "\\bElias\\b.*\\b(Op\\.?\\s*70|MWV\\s*A\\s*25|Teil|Pt\\.|Part)\\b",
+  "^Elias:",
+  "\\bElijah\\b.*\\bOp\\.?\\s*70\\b",
+  "Mendelssohn.*\\bElias\\b"
+ ],
+ "movements": [
+  {
+   "number": "0",
+   "kind": "Einleitung",
+   "lines": [
+    "So wahr der Herr, der Gott Israels, lebet,",
+    "vor dem ich stehe:",
+    "Es soll diese Jahre weder Tau",
+    "noch Regen kommen,",
+    "ich sage es denn."
+   ],
+   "part": 1
+  },
+  {
+   "number": "1",
+   "kind": "Chor",
+   "lines": [
+    "Hilf, Herr! Hilf, Herr!",
+    "Willst du uns denn gar vertilgen?",
+    "Die Ernte ist vergangen,",
+    "der Sommer ist dahin,",
+    "und uns ist keine Hilfe gekommen!",
+    "Will denn der Herr nicht mehr",
+    "Gott sein in Zion?",
+    "Die Tiefe ist versieget!",
+    "Und die Ströme sind vertrocknet!",
+    "Dem Säugling klebt die Zunge am Gaumen",
+    "vor Durst!",
+    "Die jungen Kinder heischen Brot!",
+    "Und da ist niemand,",
+    "der es ihnen breche!"
+   ],
+   "part": 1
+  },
+  {
+   "number": "2",
+   "kind": "Duett mit Chor",
+   "lines": [
+    "Herr, höre unser Gebet!",
+    "Zion streckt ihre Hände aus,",
+    "und da ist niemand, der sie tröste."
+   ],
+   "part": 1
+  },
+  {
+   "number": "3",
+   "kind": "Rezitativ",
+   "lines": [
+    "Zerreißet eure Herzen",
+    "und nicht eure Kleider!",
+    "Um unsrer Sünden willen",
+    "hat Elias den Himmel verschlossen,",
+    "durch das Wort des Herrn!",
+    "So bekehret euch zu dem Herrn,",
+    "eurem Gott,",
+    "denn er ist gnädig, barmherzig,",
+    "geduldig und von großer Güte",
+    "und reut ihn bald der Strafe."
+   ],
+   "part": 1
+  },
+  {
+   "number": "4",
+   "kind": "Arie",
+   "lines": [
+    "»So ihr mich von ganzem Herzen suchet,",
+    "so will ich mich finden lassen«,",
+    "spricht unser Gott.",
+    "Ach, daß ich wußte, wie ich ihn finden",
+    "und zu seinem Stuhle kommen möchte!"
+   ],
+   "part": 1
+  },
+  {
+   "number": "5",
+   "kind": "Chor",
+   "lines": [
+    "Aber der Herr sieht es nicht.",
+    "Er spottet unser!",
+    "Der Fluch ist über uns gekommen.",
+    "Er wird uns verfolgen, bis er uns tötet!",
+    "»Denn ich der Herr, dein Gott,",
+    "ich bin ein eifriger Gott,",
+    "der da heimsucht der Väter Missetat",
+    "an den Kindern bis ins dritte",
+    "und vierte Glied derer, die mich hassen.",
+    "Und tue Barmherzigkeit an vielen Tausenden,",
+    "die mich liebhaben und meine Gebote halten.«"
+   ],
+   "part": 1
+  },
+  {
+   "number": "6",
+   "kind": "Rezitativ",
+   "lines": [
+    "Elias, gehe weg von hinnen",
+    "und wende dich gen Morgen,",
+    "und verbirg dich am Bache Crith!",
+    "Du sollst vom Bache trinken,",
+    "und die Raben werden dir Brot bringen",
+    "des Morgens und des Abends,",
+    "nach dem Wort deines Gottes."
+   ],
+   "part": 1
+  },
+  {
+   "number": "7",
+   "kind": "Doppelquartett (Sopran I/II, Alt I/II, Tenor I/II, Baß",
+   "lines": [
+    "Denn er hat seinen Engeln befohlen über dir,",
+    "daß sie dich behüten auf allen deinen Wegen,",
+    "daß sie dich auf den Händen tragen,",
+    "und du deinen Fuß nicht",
+    "an einen Stein stoßest.",
+    "Nun auch der Bach vertrocknet ist,",
+    "Elias, mache dich auf, gehe gen Zarpath",
+    "und bleibe daselbst!",
+    "Denn der Herr hat daselbst einer Witwe geboten,",
+    "daß sie dich versorge.",
+    "Das Mehl im Cad soll nicht verzehret werden,",
+    "und dem Ölkruge soll nichts mangeln,",
+    "bis auf den Tag, da der Herr",
+    "regnen lassen wird auf Erden."
+   ],
+   "part": 1
+  },
+  {
+   "number": "8",
+   "kind": "Rezitativ, Arie und Duett",
+   "lines": [
+    "Was hast du an mir getan, du Mann Gottes!",
+    "Du bist zu mir hereingekommen,",
+    "daß meiner Missetat gedacht",
+    "und mein Sohn getötet werde!",
+    "Hilf mir, du Mann Gottes!",
+    "Mein Sohn ist krank,",
+    "und seine Krankheit ist so hart,",
+    "daß kein Odem mehr in ihm blieb.",
+    "Ich netze mit meinen Tränen",
+    "mein Lager die ganze Nacht,",
+    "Du schaust das Elend,",
+    "sei du der Armen Helfer!",
+    "Hilf meinem Sohn!",
+    "Es ist kein Odem mehr in ihm!",
+    "Gib mir her deinen Sohn!",
+    "Herr, mein Gott, vernimm mein Fleh'n!",
+    "Wende dich, Herr, und sei ihr gnädig",
+    "und hilf dem Sohne deiner Magd!",
+    "Denn du bist gnädig, barmherzig, geduldig",
+    "und von großer Güte und Treue!",
+    "Herr, mein Gott, lasse die Seele dieses Kindes",
+    "wieder zu ihm kommen!",
+    "Wirst du denn unter den Toten Wunder tun?",
+    "Es ist kein Odem mehr in ihm!",
+    "Herr, mein Gott, lasse die Seele dieses Kindes b",
+    "wieder zu ihm kommen!",
+    "Werden die Gestorb'nen aufersteh'n und dir danken?",
+    "Herr, mein Gott, lasse die Seele dieses Kindes",
+    "wieder zu ihm kommen!",
+    "Der Herr erhört deine Stimme,",
+    "die Seele des Kindes kommt wieder!",
+    "Es wird lebendig!",
+    "Siehe da, dein Sohn lebet!",
+    "Nun erkenne ich, daß du ein Mann Gottes bist,",
+    "und des Herrn Wort in deinem Munde ist Wahrheit!",
+    "Wie soll ich dem Herrn vergelten",
+    "alle seine Wohltat, die er an mir tut?",
+    "Du sollst den Herrn, deinen Gott,",
+    "liebhaben von ganzem Herzen.",
+    "Von ganzer Seele, von allem Vermögen.",
+    "Wohl dem, der den Herrn fürchtet."
+   ],
+   "part": 1
+  },
+  {
+   "number": "9",
+   "kind": "Chor",
+   "lines": [
+    "Wohl dem, der den Herrn fürchtet",
+    "und auf seinen Wegen geht!",
+    "Wohl dem, der auf Gottes Wegen geht!",
+    "Den Frommen geht das Licht auf in der Finsternis.",
+    "Den Frommen geht das Licht auf von dem Gnädigen,",
+    "Barmherzigen und Gerechten."
+   ],
+   "part": 1
+  },
+  {
+   "number": "10",
+   "kind": "Rezitativ mit Chor",
+   "lines": [
+    "So wahr der Herr Zebaoth lebet, vor dem ich stehe:",
+    "Heute, im dritten Jahre,",
+    "will ich mich dem Könige zeigen,",
+    "und der Herr wird wieder regnen lassen auf Erden.",
+    "Bist du's, Elias, bist du's, der Israel verwirrt?",
+    "Du bist's, Elias, du bist's, der Israel verwirrt!",
+    "Ich verwirrte Israel nicht,",
+    "sondern du, König,",
+    "und deines Vaters Haus,",
+    "damit, daß ihr des Herrn Gebot verlaßt",
+    "und wandelt Baalim nach.",
+    "Wohlan! So sende nun hin,",
+    "und versammle zu mir das ganze Israel",
+    "auf den Berg Carmel,",
+    "und alle Propheten Baals,",
+    "und alle Propheten des Hains,",
+    "die vom Tische der Königin essen:",
+    "Da wollen wir sehn, ob Gott der Herr ist.",
+    "Da wollen wir sehn, ob Gott der Herr ist.",
+    "Auf denn, ihr Propheten Baals,",
+    "erwählet einen Farren,",
+    "und legt kein Feuer daran,",
+    "und rufet ihr an den Namen eures Gottes,",
+    "und ich will den Namen des Herrn anrufen;",
+    "welcher Gott nun mit Feuer antworten wird,",
+    "der sei Gott.",
+    "Ja, welcher Gott nun mit Feuer antworten wird,",
+    "der sei Gott.",
+    "Ruft euren Gott zuerst, denn eurer sind viele!",
+    "Ich aber bin allein übergeblieben,",
+    "ein Prophet des Herrn.",
+    "Ruft eure Feldgötter, und eure Berggötter!"
+   ],
+   "part": 1
+  },
+  {
+   "number": "11",
+   "kind": "Chor",
+   "lines": [
+    "Baal, erhöre uns!",
+    "Wende dich zu unserm Opfer",
+    "Baal, erhöre uns!",
+    "Höre uns, mächtiger Gott!",
+    "Send' uns dein Feuer",
+    "und vertilge den Feind!"
+   ],
+   "part": 1
+  },
+  {
+   "number": "12",
+   "kind": "Rezitativ und Chor",
+   "lines": [
+    "Rufet lauter!",
+    "Denn er ist ja Gott:",
+    "Er dichtet, oder er hat zu schaffen,",
+    "oder ist über Feld, oder schläft er vielleicht,",
+    "daß er aufwache!",
+    "Rufet lauter, rufet lauter!",
+    "Baal, erhöre uns, wache auf!",
+    "Warum schläfst du?"
+   ],
+   "part": 1
+  },
+  {
+   "number": "13",
+   "kind": "Rezitativ und Chor",
+   "lines": [
+    "Rufet lauter! Er hört euch nicht!",
+    "Ritzt euch mit Messern und mit Pfriemen,",
+    "nach eurer Weise.",
+    "Hinkt um den Altar, den ihr gemacht,",
+    "rufet und weissagt!",
+    "Da wird keine Stimme sein,",
+    "keine Antwort, kein Aufmerken.",
+    "Baal! Baal! Gib uns Antwort, Baal!",
+    "Siehe, die Feinde verspotten uns!",
+    "Kommt her, alles Volk, kommt her zu mir!"
+   ],
+   "part": 1
+  },
+  {
+   "number": "14",
+   "kind": "Arie",
+   "lines": [
+    "Herr Gott Abrahams, Isaaks und Israels,",
+    "laß heut kund werden, daß du Gott bist,",
+    "und ich dein Knecht!",
+    "Herr Gott Abrahams!",
+    "Und daß ich solches alles",
+    "nach deinem Worte getan!",
+    "Erhöre mich, Herr, erhöre mich!",
+    "Herr Gott Abrahams, Isaaks und Israels,",
+    "erhöre mich, Herr, erhöre mich!",
+    "Daß dies Volk wisse, daß du Herr Gott bist,",
+    "daß du ihr Herz danach bekehrest!"
+   ],
+   "part": 1
+  },
+  {
+   "number": "15",
+   "kind": "Quartett (Sopran/Alt/Tenor/Baß)",
+   "lines": [
+    "Wirf dein Anliegen auf den Herrn,",
+    "der wird dich versorgen,",
+    "und wird den Gerechten",
+    "nicht ewiglich in Unruhe lassen.",
+    "Denn seine Gnade reicht so weit der Himmel ist,",
+    "und keiner wird zu Schanden, der seiner harret."
+   ],
+   "part": 1
+  },
+  {
+   "number": "16",
+   "kind": "Rezitativ mit Chor",
+   "lines": [
+    "Der du deine Diener machst zu Geistern,",
+    "und deine Engel zu Feuerflammen,",
+    "sende sie herab!",
+    "Das Feuer fiel herab! Feuer!",
+    "Die Flamme fraß das Brandopfer!",
+    "Fallt nieder auf euer Angesicht!",
+    "Der Herr ist Gott, der Herr ist Gott!",
+    "Der Herr, unser Gott ist ein einiger Herr,",
+    "und es sind keine andern Götter neben ihm.",
+    "Greift die Propheten Baals,",
+    "daß ihrer keiner entrinne,",
+    "führt sie hinab an den Bach,",
+    "und schlachtet sie daselbst!",
+    "Greift die Propheten Baals,",
+    "daß ihrer keiner entrinne!"
+   ],
+   "part": 1
+  },
+  {
+   "number": "17",
+   "kind": "Arie",
+   "lines": [
+    "Ist nicht des Herrn Wort wie ein Feuer",
+    "und wie ein Hammer, der Felsen zerschlägt?",
+    "Sein Wort ist wie ein Feuer",
+    "und wie ein Hammer, der Felsen zerschlägt.",
+    "Gott ist ein rechter Richter,",
+    "und ein Gott, der täglich droht;",
+    "will man sich nicht bekehren,",
+    "so hat er sein Schwert gewetzt,",
+    "und seinen Bogen gespannt, und zielet!"
+   ],
+   "part": 1
+  },
+  {
+   "number": "18",
+   "kind": "Arioso",
+   "lines": [
+    "Weh ihnen, daß sie von mir weichen!",
+    "Sie müssen verstöret werden,",
+    "denn sie sind abtrünnig von mir geworden.",
+    "Ich wollte sie wohl erlösen,",
+    "wenn sie nicht Lügen wider mich lehrten.",
+    "Ich wollte sie wohl erlösen,",
+    "aber sie hörten es nicht.",
+    "Weh ihnen! Weh ihnen!"
+   ],
+   "part": 1
+  },
+  {
+   "number": "19",
+   "kind": "Rezitativ mit Chor",
+   "lines": [
+    "Hilf deinem Volk, du Mann Gottes!",
+    "Es ist doch ja unter der Heiden Götzen keiner,",
+    "der Regen könnte geben:",
+    "so kann der Himmel auch nicht regnen;",
+    "denn Gott allein kann solches alles tun.",
+    "O Herr! Du hast nun deine Feinde",
+    "verworfen und zerschlagen!",
+    "So schaue nun vom Himmel herab",
+    "und wende die Not deines Volkes.",
+    "Öffne den Himmel und fahre herab.",
+    "Hilf deinem Knecht, o du mein Gott!",
+    "Öffne den Himmel und fahre herab.",
+    "Hilf deinem Knecht, o du mein Gott!",
+    "Gehe hinauf, Knabe, und schaue zum Meere zu,",
+    "ob der Herr mein Gebet erhört.",
+    "Ich sehe nichts; Der Himmel ist ehern",
+    "über meinem Haupte.",
+    "Wenn der Himmel verschlossen wird,",
+    "weil sie an dir gesündigt haben,",
+    "und sie werden beten",
+    "und deinen Namen bekennen",
+    "und sich von ihren Sünden bekehren,",
+    "so wollest du ihnen gnädig sein.",
+    "Hilf deinem Knecht, o du mein Gott!",
+    "So wollest du uns gnädig sein,",
+    "Hilf deinem Knecht, o du mein Gott!",
+    "Gehe wieder hin und schaue zum Meere zu.",
+    "Ich sehe nichts; die Erde ist eisern unter mir!",
+    "Rauscht es nicht, als wollte es regnen?",
+    "Siehest du noch nichts vom Meere her?",
+    "Ich sehe nichts!",
+    "Wende dich zum Gebet deines Knechts,",
+    "zu seinem Fleh'n, Herr! Herr, du mein Gott!",
+    "Wenn ich rufe zu dir, Herr, mein Gott,",
+    "so schweige mir nicht!",
+    "Gedenke, Herr, an deine Barmherzigkeit.",
+    "Es gehet eine kleine Wolke auf aus dem Meere,",
+    "wie eines Mannes Hand;",
+    "der Himmel wird schwarz von Wolken und Wind;",
+    "es rauschet stärker und stärker!",
+    "Danket dem Herrn, denn er ist freundlich.",
+    "Danket dem Herrn, denn er ist freundlich",
+    "und seine Güte währet ewiglich!"
+   ],
+   "part": 1
+  },
+  {
+   "number": "20",
+   "kind": "Chor",
+   "lines": [
+    "Dank sei dir, Gott, du tränkest",
+    "das durst'ge Land!",
+    "Die Wasserströme erheben sich,",
+    "sie erheben ihr Brausen.",
+    "Die Wasserwogen sind groß,",
+    "und brausen gewaltig.",
+    "Doch der Herr ist noch größer in der Höhe."
+   ],
+   "part": 1
+  },
+  {
+   "number": "21",
+   "kind": "Arie",
+   "lines": [
+    "Höre, Israel, höre des Herrn Stimme!",
+    "Ach, daß du merkest auf sein Gebot!",
+    "Aber wer glaubt unsrer Predigt,",
+    "und wem wird der Arm des Herrn geoffenbart?",
+    "So spricht der Herr, der Erlöser Israels,",
+    "sein Heiliger, zum Knecht,",
+    "der unter den Tyrannen ist,",
+    "so spricht der Herr:",
+    "Ich bin euer Tröster.",
+    "Weiche nicht, denn ich bin dein Gott!",
+    "Ich stärke dich! Wer bist du denn,",
+    "daß du dich vor Menschen fürchtest,",
+    "die doch sterben? Und vergissest des Herrn,",
+    "der dich gemacht hat, der den Himmel ausbreitet",
+    "und die Erde gegründet.",
+    "Wer bist du denn?"
+   ],
+   "part": 2
+  },
+  {
+   "number": "22",
+   "kind": "Chor",
+   "lines": [
+    "Fürchte dich nicht, spricht unser Gott,",
+    "fürchte dich nicht, ich bin mit dir, ich helfe dir!",
+    "Denn ich bin der Herr, dein Gott,",
+    "der zu dir spricht: Fürchte dich nicht!",
+    "Ob tausend fallen zu deiner Seite",
+    "und zehentausend zu deiner Rechten,",
+    "so wird es doch dich nicht treffen."
+   ],
+   "part": 2
+  },
+  {
+   "number": "23",
+   "kind": "Rezitativ mit Chor",
+   "lines": [
+    "Der Herr hat dich erhoben aus dem Volk",
+    "und dich zum König über Israel gesetzt.",
+    "Aber du, Ahab, hast Übel getan über alle,",
+    "die vor dir gewesen sind.",
+    "Es war dir ein Geringes,",
+    "daß du wandeltest in der Sünde Jerobeams,",
+    "und machtest dem Baal einen Hain,",
+    "den Herrn, den Gott Israels zu erzürnen;",
+    "du hast totgeschlagen",
+    "und fremdes Gut genommen!",
+    "Und der Herr wird Israel schlagen,",
+    "wie ein Rohr im Wasser bewegt wird,",
+    "und wird Israel übergeben um eurer Sünde willen.",
+    "Habt ihr's gehört, wie er geweissagt hat wider dieses Vol",
+    "Wir haben es gehört!",
+    "Wie er geweissagt hat wider den König in Israel?",
+    "Wir haben es gehört!",
+    "Warum darf er weissagen im Namen des Herrn?",
+    "Was wäre für ein Königreich in Israel,",
+    "wenn Elias Macht hätte über des Königs Macht?",
+    "Die Götter tun mir dies und das,",
+    "wenn ich nicht morgen um diese Zeit",
+    "seiner Seele tue, wie dieser Seelen einer,",
+    "die er geopfert hat am Bache Kison.",
+    "Er muß sterben!",
+    "Er hat die Propheten Baals getötet.",
+    "Er muß sterben!",
+    "Er hat sie mit dem Schwert erwürgt.",
+    "Er hat sie erwürgt.",
+    "Er hat den Himmel verschlossen.",
+    "Er hat den Himmel verschlossen.",
+    "Er hat die teure Zeit über uns gebracht.",
+    "Er hat die teure Zeit über uns gebracht.",
+    "So ziehet hin, und greift Elias, er ist des Todes schuldi",
+    "Tötet ihn, laßt uns ihm tun wie er getan hat."
+   ],
+   "part": 2
+  },
+  {
+   "number": "24",
+   "kind": "Chor",
+   "lines": [
+    "Wehe ihm, er muß sterben!",
+    "Warum darf er den Himmel verschließen?",
+    "Warum darf er weissagen im Namen des Herrn?",
+    "Dieser ist des Todes schuldig!",
+    "Wehe ihm, er muß sterben,",
+    "denn er hat geweissagt wider diese Stadt,",
+    "wie wir mit unsern Ohren gehört.",
+    "So ziehet hin, greifet ihn, tötet ihn!"
+   ],
+   "part": 2
+  },
+  {
+   "number": "25",
+   "kind": "Rezitativ",
+   "lines": [
+    "Du Mann Gottes,",
+    "laß meine Rede etwas vor dir gelten!",
+    "So spricht die Königin:",
+    "Elias ist des Todes schuldig;",
+    "und sie sammeln sich wider dich,",
+    "sie stellen deinem Gange Netze,",
+    "und ziehen aus, daß sie dich greifen,",
+    "daß sie dich töten!",
+    "So mache dich auf und wende dich von ihnen,",
+    "gehe hin in die Wüste.",
+    "Der Herr, dein Gott wird selber mit dir wandeln,",
+    "er wird die Hand nicht abtun, noch dich verlassen.",
+    "Ziehe hin und segne uns auch!",
+    "Sie wollen sich nicht bekehren!",
+    "Bleibe hier, du Knabe; der Herr sei mit euch.",
+    "Ich gehe hin in die Wüste!"
+   ],
+   "part": 2
+  },
+  {
+   "number": "26",
+   "kind": "Arie",
+   "lines": [
+    "Es ist genug!",
+    "So nimm nun, Herr, meine Seele!",
+    "Ich bin nicht besser denn meine Väter.",
+    "Ich begehre nicht mehr zu leben,",
+    "denn meine Tage sind vergeblich gewesen.",
+    "Ich habe geeifert um den Herrn,",
+    "um den Gott Zebaoth,",
+    "denn die Kinder Israels",
+    "haben deinen Bund verlassen,",
+    "und deine Altäre haben sie zerbrochen,",
+    "und deine Propheten mit dem Schwert erwürgt.",
+    "Und ich bin allein übrig geblieben;",
+    "und sie stehn danach,",
+    "daß sie mir mein Leben nehmen!",
+    "Es ist genug!",
+    "So nimm nun, Herr, meine Seele!",
+    "Ich bin nicht besser denn meine Väter.",
+    "Nimm nun, o Herr, meine Seele!"
+   ],
+   "part": 2
+  },
+  {
+   "number": "27",
+   "kind": "Rezitativ",
+   "lines": [
+    "Siehe, er schläft unter",
+    "dem Wacholder in der Wüste,",
+    "aber die Engel des Herrn",
+    "lagern sich um die her, so ihn fürchten."
+   ],
+   "part": 2
+  },
+  {
+   "number": "28",
+   "kind": "Terzett (Sopran I/II, Alt)",
+   "lines": [
+    "Hebe deine Augen auf zu den Bergen,",
+    "von welchen dir Hilfe kommt.",
+    "Deine Hilfe kommt vom Herrn,",
+    "der Himmel und Erde gemacht hat.",
+    "Er wird deinen Fuß nicht gleiten lassen,",
+    "und der dich behütet schläft nicht."
+   ],
+   "part": 2
+  },
+  {
+   "number": "29",
+   "kind": "Chor",
+   "lines": [
+    "Siehe, der Hüter Israels",
+    "schläft noch schlummert nicht.",
+    "Wenn du mitten in Angst wandelst,",
+    "so erquickt er dich."
+   ],
+   "part": 2
+  },
+  {
+   "number": "30",
+   "kind": "Rezitativ",
+   "lines": [
+    "Stehe auf, Elias,",
+    "denn du hast einen großen Weg vor dir!",
+    "Vierzig Tage und vierzig Nächte sollst du geh'n",
+    "bis an den Berg Gottes Horeb.",
+    "O Herr, ich arbeite vergeblich",
+    "und bringe meine Kraft umsonst und unnütz zu.",
+    "Ach, daß du den Himmel zerrissest,",
+    "und führest herab!",
+    "Daß die Berge vor dir zerflössen!",
+    "Daß deine Feinde vor dir zittern müßten",
+    "durch die Wunder, die du tust!",
+    "Warum lässest du sie irren von deinen Wegen",
+    "und ihr Herz verstocken,",
+    "daß sie dich nicht fürchten?",
+    "O daß meine Seele stürbe!"
+   ],
+   "part": 2
+  },
+  {
+   "number": "31",
+   "kind": "Arie",
+   "lines": [
+    "Sei stille dem Herrn und warte auf ihn;",
+    "der wird dir geben, was dein Herz wünscht.",
+    "Befiehl ihm deine Wege und hoffe auf ihn.",
+    "Steh ab vom Zorn und laß den Grimm.",
+    "Sei stille dem Herrn und warte auf ihn."
+   ],
+   "part": 2
+  },
+  {
+   "number": "32",
+   "kind": "Chor",
+   "lines": [
+    "Wer bis an das Ende beharrt, der wird selig."
+   ],
+   "part": 2
+  },
+  {
+   "number": "33",
+   "kind": "Rezitativ",
+   "lines": [
+    "Herr, es wird Nacht um mich; sei du nicht ferne!",
+    "Verbirg dein Antlitz nicht vor mir!",
+    "Meine Seele dürstet nach dir,",
+    "wie ein dürres Land.",
+    "Wohlan denn, gehe hinaus,",
+    "und tritt auf den Berg vor den Herrn,",
+    "denn seine Herrlichkeit erscheinet über dir!",
+    "Verhülle dein Antlitz, denn es naht der Herr."
+   ],
+   "part": 2
+  },
+  {
+   "number": "34",
+   "kind": "Chor",
+   "lines": [
+    "Der Herr ging vorüber, und ein starker Wind,",
+    "der die Berge zerriß und die Felsen zerbrach,",
+    "ging vor dem Herrn her,",
+    "aber der Herr war nicht im Sturmwind.",
+    "Der Herr ging vorüber, und die Erde erbebte,",
+    "und das Meer erbrauste,",
+    "aber der Herr war nicht im Erdbeben.",
+    "Und nach dem Erdbeben kam ein Feuer,",
+    "aber der Herr war nicht im Feuer.",
+    "Und nach dem Feuer kam ein stilles,",
+    "sanftes Sausen.",
+    "Und in dem Säuseln nahte sich der Herr."
+   ],
+   "part": 2
+  },
+  {
+   "number": "35",
+   "kind": "Rezitativ",
+   "lines": [
+    "Seraphim standen über ihm,",
+    "und einer rief zum andern:",
+    "Heilig, heilig, heilig ist Gott der Herr Zebaoth.",
+    "Alle Lande sind seiner Ehre voll."
+   ],
+   "part": 2
+  },
+  {
+   "number": "36",
+   "kind": "Chor und Rezitativ",
+   "lines": [
+    "Gehe wiederum hinab!",
+    "Noch sind übrig geblieben",
+    "siebentausend in Israel,",
+    "die sich nicht gebeugt vor Baal.",
+    "Gehe wiederum hinab!",
+    "Tue nach des Herren Wort!",
+    "Ich gehe hinab in der Kraft des Herrn!",
+    "Du bist ja der Herr!",
+    "Ich muß um deinetwillen leiden;",
+    "darum freuet sich mein Herz und ich bin fröhlich;",
+    "auch mein Fleisch wird sicher liegen."
+   ],
+   "part": 2
+  },
+  {
+   "number": "37",
+   "kind": "Arioso",
+   "lines": [
+    "Ja, es sollen wohl Berge weichen",
+    "und Hügel hinfallen,",
+    "aber deine Gnade wird nicht von mir weichen,",
+    "und der Bund deines Friedens soll nicht fallen."
+   ],
+   "part": 2
+  },
+  {
+   "number": "38",
+   "kind": "Chor",
+   "lines": [
+    "Und der Prophet Elias brach hervor wie ein Feuer,",
+    "und sein Wort brannte wie eine Fackel.",
+    "Er hat stolze Könige gestürzt.",
+    "Er hat auf dem Berge Sinai gehört",
+    "die zukünftige Strafe, und in Horeb die Rache.",
+    "Und da der Herr ihn wollte gen Himmel holen,",
+    "siehe, da kam ein feuriger Wagen,",
+    "mit feurigen Rossen,",
+    "und er fuhr im Wetter gen Himmel."
+   ],
+   "part": 2
+  },
+  {
+   "number": "39",
+   "kind": "Arie",
+   "lines": [
+    "Dann werden die Gerechten leuchten",
+    "wie die Sonne in ihres Vaters Reich.",
+    "Wonne und Freude werden sie ergreifen.",
+    "Aber Trauern und Seufzen wird vor ihnen fliehen."
+   ],
+   "part": 2
+  },
+  {
+   "number": "40",
+   "kind": "Rezitativ",
+   "lines": [
+    "Darum ward gesendet der Prophet Elias,",
+    "eh' denn da komme",
+    "der große und schreckliche Tag des Herrn:",
+    "er soll das Herz der Väter bekehren",
+    "zu den Kindern,",
+    "und das Herz der Kinder zu ihren Vätern;",
+    "daß der Herr nicht komme",
+    "und das Erdreich mit dem Banne schlage."
+   ],
+   "part": 2
+  },
+  {
+   "number": "41",
+   "kind": "Chor",
+   "lines": [
+    "Aber einer erwacht von Mitternacht,",
+    "und er kommt vom Aufgang der Sonne.",
+    "Der wird des Herrn Namen predigen",
+    "und wird über die Gewaltigen gehen;",
+    "das ist sein Knecht, sein Auserwählter,",
+    "an welchem seine Seele Wohlgefallen hat.",
+    "Auf ihm wird ruhen der Geist des Herrn:",
+    "der Geist der Weisheit und des Verstandes,",
+    "der Geist des Rats und der Stärke,",
+    "der Geist der Erkenntnis, und der Furcht des Herrn.",
+    "Aber einer erwacht von Mitternacht,",
+    "und er kommt vom Aufgang der Sonne."
+   ],
+   "part": 2
+  },
+  {
+   "number": "41b",
+   "kind": "Quartett",
+   "lines": [
+    "Wohlan, alle die ihr durstig seid,",
+    "kommt her zum Wasser, kommt her zu ihm!",
+    "Wohlan, alle die ihr durstig seid, kommt her zu ihm,",
+    "und neigt euer Ohr, und kommt zu ihm,",
+    "so wird eure Seele leben."
+   ],
+   "part": 2
+  },
+  {
+   "number": "42",
+   "kind": "Schlußchor",
+   "lines": [
+    "Alsdann wird euer Licht hervorbrechen",
+    "wie die Morgenröte,",
+    "und eure Besserung wird schnell wachsen;",
+    "und die Herrlichkeit des Herrn",
+    "wird euch zu sich nehmen.",
+    "Herr, unser Herrscher!",
+    "Wie herrlich ist dein Name in allen Landen,",
+    "da man dir danket im Himmel.",
+    "Amen."
+   ],
+   "part": 2
+  }
+ ]
+}

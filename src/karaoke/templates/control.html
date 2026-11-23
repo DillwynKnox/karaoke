@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ 'Karaoke Admin' if admin else 'Karaoke' }}</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        [hidden] {
+            display: none !important;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: rgb(10, 10, 10);
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 16px 16px 48px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        h1 {
+            font-size: 22px;
+            color: #1DB954;
+        }
+
+        .role {
+            margin-left: 4px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #b3b3b3;
+        }
+
+        .header-pills {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        a.pill {
+            text-decoration: none;
+        }
+
+        .pill {
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.08);
+            color: #b3b3b3;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .pill.ok {
+            background: rgba(29, 185, 84, 0.2);
+            color: #1DB954;
+        }
+
+        .pill.warn {
+            background: rgba(224, 179, 77, 0.15);
+            color: #e0b34d;
+        }
+
+        .search {
+            position: relative;
+        }
+
+        .search input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid rgba(29, 185, 84, 0.4);
+            border-radius: 12px;
+            background: #151515;
+            color: #ffffff;
+            font-size: 17px;
+            outline: none;
+        }
+
+        .search input:focus {
+            border-color: #1DB954;
+        }
+
+        .results {
+            position: absolute;
+            top: calc(100% + 6px);
+            left: 0;
+            right: 0;
+            z-index: 5;
+            max-height: 70vh;
+            overflow-y: auto;
+            list-style: none;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            background: #161616;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .result {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 12px;
+            cursor: pointer;
+        }
+
+        .result:hover,
+        .result.active {
+            background: rgba(29, 185, 84, 0.15);
+        }
+
+        .results-note {
+            padding: 12px;
+            font-size: 14px;
+            color: #b3b3b3;
+        }
+
+        .cover {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            border-radius: 6px;
+            background: #222;
+            object-fit: cover;
+        }
+
+        .song-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .song-title,
+        .song-sub {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .song-title {
+            font-weight: 600;
+        }
+
+        .song-sub {
+            font-size: 13px;
+            color: #b3b3b3;
+        }
+
+        .badge {
+            padding: 3px 8px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.08);
+            color: #b3b3b3;
+            font-size: 11px;
+            white-space: nowrap;
+        }
+
+        .badge.ready {
+            background: rgba(29, 185, 84, 0.2);
+            color: #1DB954;
+        }
+
+        .badge.busy {
+            background: rgba(224, 179, 77, 0.15);
+            color: #e0b34d;
+        }
+
+        .badge.error {
+            background: rgba(214, 84, 84, 0.2);
+            color: #e07070;
+        }
+
+        .card {
+            padding: 16px;
+            border: 1px solid rgba(29, 185, 84, 0.2);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+            font-size: 15px;
+            color: #1DB954;
+        }
+
+        .now {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .now .cover {
+            width: 72px;
+            height: 72px;
+            border-radius: 8px;
+        }
+
+        .now .song-title {
+            font-size: 18px;
+        }
+
+        .progress {
+            height: 4px;
+            margin: 14px 0 6px;
+            border-radius: 2px;
+            background: rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .progress div {
+            width: 0;
+            height: 100%;
+            background: #1DB954;
+            transition: width 0.5s linear;
+        }
+
+        .times {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #8a8a8a;
+        }
+
+        .transport {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 10px;
+        }
+
+        .round {
+            width: 52px;
+            height: 52px;
+            border: 1px solid #1DB954;
+            border-radius: 50%;
+            background: rgba(29, 185, 84, 0.15);
+            color: #1DB954;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .round.primary {
+            width: 64px;
+            height: 64px;
+            background: #1DB954;
+            color: #000;
+            font-size: 24px;
+        }
+
+        .round:disabled,
+        select:disabled {
+            opacity: 0.35;
+            cursor: default;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 0;
+        }
+
+        .row label {
+            flex-shrink: 0;
+            width: 110px;
+            font-size: 14px;
+            color: #b3b3b3;
+        }
+
+        .row input[type=range] {
+            flex: 1;
+            min-width: 0;
+            accent-color: #1DB954;
+        }
+
+        .value {
+            width: 56px;
+            font-size: 13px;
+            text-align: right;
+            color: #b3b3b3;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .offset-value {
+            flex: 1;
+            text-align: center;
+        }
+
+        .small-btn {
+            width: 34px;
+            height: 34px;
+            border: 1px solid #1DB954;
+            border-radius: 50%;
+            background: rgba(29, 185, 84, 0.15);
+            color: #1DB954;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        select {
+            flex: 1;
+            min-width: 0;
+            padding: 8px;
+            border: 1px solid rgba(29, 185, 84, 0.4);
+            border-radius: 8px;
+            background: #151515;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        .hint {
+            margin: 4px 0 8px;
+            font-size: 12px;
+            line-height: 1.45;
+            color: #8a8a8a;
+        }
+
+        .modes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .mixer-modes {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6px;
+            margin-bottom: 6px;
+        }
+
+        .mode {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2px;
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.04);
+            color: #ffffff;
+            font: inherit;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .mode:hover:not(:disabled) {
+            border-color: rgba(29, 185, 84, 0.5);
+        }
+
+        .mode.selected {
+            border-color: #1DB954;
+            background: rgba(29, 185, 84, 0.16);
+        }
+
+        .mode:disabled {
+            opacity: 0.35;
+            cursor: default;
+        }
+
+        .mode-icon {
+            font-size: 22px;
+        }
+
+        .mode-name {
+            font-weight: 700;
+        }
+
+        .mode-text {
+            font-size: 12px;
+            color: #b3b3b3;
+        }
+
+        .mode.compact {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 8px 4px;
+            font-size: 13px;
+        }
+
+        .mode.compact .mode-icon {
+            font-size: 15px;
+        }
+
+        .preset + .preset {
+            margin-top: 6px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .preset-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .preset-reset {
+            padding: 4px 12px;
+            border: 1px solid rgba(29, 185, 84, 0.5);
+            border-radius: 999px;
+            background: transparent;
+            color: #1DB954;
+            font: inherit;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .preset-reset:disabled {
+            opacity: 0.35;
+            cursor: default;
+        }
+
+        .queue {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            list-style: none;
+        }
+
+        .queue-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .icon-btn {
+            flex-shrink: 0;
+            width: 34px;
+            height: 34px;
+            border: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.06);
+            color: #dddddd;
+            cursor: pointer;
+        }
+
+        .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.14);
+        }
+
+        .empty {
+            font-size: 14px;
+            color: #8a8a8a;
+        }
+
+        .dialog-backdrop {
+            position: fixed;
+            inset: 0;
+            z-index: 20;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 16px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .dialog {
+            width: 100%;
+            max-width: 480px;
+            max-height: calc(100vh - 32px);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 18px;
+            border: 1px solid rgba(29, 185, 84, 0.3);
+            border-radius: 18px;
+            background: #151515;
+        }
+
+        .advanced summary {
+            font-size: 14px;
+            color: #b3b3b3;
+            cursor: pointer;
+        }
+
+        .advanced[open] summary {
+            margin-bottom: 4px;
+        }
+
+        .dialog-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border: 0;
+            border-radius: 999px;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .btn.primary {
+            flex: 1;
+            background: #1DB954;
+            color: #000;
+        }
+
+        .btn.secondary {
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 40vh;
+            padding: 12px;
+            border: 1px solid rgba(29, 185, 84, 0.4);
+            border-radius: 10px;
+            background: #0f0f0f;
+            color: #ffffff;
+            font: 15px/1.45 inherit;
+            font-family: inherit;
+            resize: vertical;
+        }
+
+        .text-btn {
+            align-self: center;
+            margin-top: 12px;
+            padding: 8px 14px;
+            border: 1px solid rgba(29, 185, 84, 0.5);
+            border-radius: 999px;
+            background: transparent;
+            color: #1DB954;
+            font: inherit;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .toast {
+            position: fixed;
+            left: 50%;
+            bottom: 24px;
+            z-index: 30;
+            max-width: calc(100% - 32px);
+            padding: 10px 18px;
+            border-radius: 999px;
+            background: #1DB954;
+            color: #000;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            transform: translateX(-50%);
+        }
+
+        .toast.error {
+            background: #d65454;
+            color: #ffffff;
+        }
+
+        @media (min-width: 560px) {
+            .dialog-backdrop {
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 440px) {
+            .mixer-modes {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🎤 Karaoke{% if admin %}<span class="role">Admin</span>{% endif %}</h1>
+            {% if admin %}
+            <div class="header-pills">
+                <a class="pill" id="invite-pill" href="/api/guest-qr" target="_blank" rel="noopener" hidden>Invite QR</a>
+                <span class="pill" id="player-pill">Connecting...</span>
+            </div>
+            {% endif %}
+        </header>
+
+        <div class="search">
+            <input id="search" type="search" placeholder="Search a song or artist..." autocomplete="off"
+                autocorrect="off" spellcheck="false" enterkeyhint="search">
+            <ul class="results" id="results" hidden></ul>
+        </div>
+
+        <section class="card">
+            <h2>Now singing</h2>
+            <div class="now">
+                <img class="cover" id="now-cover" alt="" hidden>
+                <div class="song-text">
+                    <div class="song-title" id="now-title">Nothing playing</div>
+                    <div class="song-sub" id="now-sub">Search for a song to start</div>
+                </div>
+            </div>
+            <div class="progress"><div id="now-progress"></div></div>
+            <div class="times"><span id="now-position">0:00</span><span id="now-duration">0:00</span></div>
+            {% if admin %}
+            <div class="transport">
+                <button class="round" id="btn-restart" title="Restart">⏮</button>
+                <button class="round primary" id="btn-toggle" title="Play / pause">⏸</button>
+                <button class="round" id="btn-skip" title="Skip">⏭</button>
+            </div>
+            <div class="transport">
+                <button class="text-btn" id="btn-lyrics">📝 Edit lyrics</button>
+            </div>
+            {% endif %}
+        </section>
+
+        {% if admin %}
+        <section class="card">
+            <h2>Mix of the current song</h2>
+            <div class="mixer-modes" id="mixer-modes"></div>
+            <div id="mixer-levels"></div>
+            <p class="hint" id="mixer-note" hidden></p>
+            <p class="hint">0 dB plays a track as recorded, so instrumental and vocals both at 0 dB sound like the
+                original song, not twice as loud. Below 0 dB is quieter, above is louder.</p>
+            <div class="row">
+                <label>Lyrics timing</label>
+                <button class="small-btn" id="offset-earlier" title="Lyrics earlier">−</button>
+                <span class="value offset-value" id="offset-value">0.0s</span>
+                <button class="small-btn" id="offset-later" title="Lyrics later">+</button>
+            </div>
+            <div class="row">
+                <label for="key">Key</label>
+                <select id="key"></select>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Mode levels</h2>
+            <div id="preset-levels"></div>
+            <p class="hint">Changes apply to new songs and to songs already queued in that mode. Songs with a
+                custom mix keep their levels.</p>
+        </section>
+        {% endif %}
+
+        <section class="card">
+            <h2>Queue</h2>
+            <ol class="queue" id="queue"></ol>
+        </section>
+    </div>
+
+    <div class="dialog-backdrop" id="dialog" hidden>
+        <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title">
+            <div class="now">
+                <img class="cover" id="dialog-cover" alt="" hidden>
+                <div class="song-text">
+                    <div class="song-title" id="dialog-title"></div>
+                    <div class="song-sub" id="dialog-sub"></div>
+                </div>
+            </div>
+            <div class="modes" id="dialog-modes"></div>
+            <details class="advanced" id="dialog-advanced">
+                <summary>Advanced <span id="dialog-custom"></span></summary>
+                <div id="dialog-levels"></div>
+                <p class="hint">0 dB plays a track as recorded. Instrumental and vocals both at 0 dB sound like the
+                    original song.</p>
+            </details>
+            <div class="dialog-actions">
+                <button class="btn secondary" id="dialog-cancel" type="button">Cancel</button>
+                <button class="btn primary" id="dialog-add" type="button">Add to queue</button>
+            </div>
+        </div>
+    </div>
+
+    {% if admin %}
+    <div class="dialog-backdrop" id="lyrics-dialog" hidden>
+        <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="lyrics-title">
+            <div class="song-text">
+                <div class="song-title" id="lyrics-title"></div>
+                <div class="song-sub" id="lyrics-source"></div>
+            </div>
+            <textarea id="lyrics-text" spellcheck="false" placeholder="One sung line per line"></textarea>
+            <p class="hint">The text is synced to the vocals automatically. Repeated lines only need to be listed once.</p>
+            <div class="dialog-actions">
+                <button class="btn secondary" id="lyrics-cancel" type="button">Cancel</button>
+                <button class="btn primary" id="lyrics-save" type="button">Save and sync</button>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <datalist id="db-ticks"><option value="0"></option></datalist>
+    <div class="toast" id="toast" hidden></div>
+
+    <script>
+        const IS_ADMIN = {{ 'true' if admin else 'false' }};
+        const $ = id => document.getElementById(id);
+
+        const STATUS = {
+            queued: ['Waiting', 'busy'],
+            downloading: ['Downloading', 'busy'],
+            analyzing: ['Analyzing', 'busy'],
+            separating: ['Separating', 'busy'],
+            lyrics: ['Syncing lyrics', 'busy'],
+            ready: ['Ready', 'ready'],
+            error: ['Error', 'error'],
+        };
+        // Search results whose lyrics timing is guessed, see lyrics.lyrics_match
+        const LYRICS_MATCH = {
+            other_version: ['Lyrics timing guessed', 'busy', 'The synced lyrics belong to another version of the song'],
+            plain: ['Lyrics timing guessed', 'busy', 'Only unsynced lyrics were found'],
+            none: ['No lyrics', 'error', 'No lyrics were found for this song'],
+        };
+        const MODES = [
+            { id: 'karaoke', icon: '🎤', name: 'Karaoke', text: 'Instrumental with quiet guide vocals' },
+            { id: 'hardcore', icon: '🔥', name: 'Hardcore', text: 'Instrumental only, no guidance' },
+            { id: 'boring', icon: '😴', name: 'Boring', text: 'The original song as recorded' },
+            { id: 'drunk', icon: '🍻', name: 'Drunk', text: 'Full vocals, no instrumental' },
+        ];
+        const CUSTOM_MODE = { id: 'custom', icon: '🎛️', name: 'Custom' };
+        const LEVEL_LABELS = { instrumental_db: 'Instrumental', vocals_db: 'Guide vocals', original_db: 'Original track' };
+        const MAJOR_KEYS = ['C major', 'C# major', 'D major', 'D# major', 'E major', 'F major',
+            'F# major', 'G major', 'G# major', 'A major', 'A# major', 'B major'];
+        const MINOR_KEYS = ['A minor', 'A# minor', 'B minor', 'C minor', 'C# minor', 'D minor',
+            'D# minor', 'E minor', 'F minor', 'F# minor', 'G minor', 'G# minor'];
+        // Polling must not move a slider the user is currently dragging.
+        const SLIDER_GRACE_MS = 1500;
+
+        let state = null;
+        let lastErrorId;
+        let queueSignature = null;
+        let searchTimer = null;
+        let searchAbort = null;
+        let results = [];
+        let activeResult = -1;
+        let dialogSong = null;
+        let dialogMix = null;
+
+        function formatTime(seconds) {
+            const s = Math.max(0, Math.floor(seconds || 0));
+            return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
+        }
+
+        function formatDb(db) {
+            if (db <= state.mix.mute_db) return 'Mute';
+            return (db > 0 ? '+' : db < 0 ? '−' : '') + Math.abs(db) + ' dB';
+        }
+
+        function modeLabel(mix) {
+            const mode = MODES.find(m => m.id === mix.mode) || CUSTOM_MODE;
+            return `${mode.icon} ${mode.name}`;
+        }
+
+        function levelsFor(mode) {
+            return mode === 'boring' ? ['original_db'] : ['instrumental_db', 'vocals_db'];
+        }
+
+        function toast(text, isError) {
+            const el = $('toast');
+            el.textContent = text;
+            el.classList.toggle('error', !!isError);
+            el.hidden = false;
+            clearTimeout(toast.timer);
+            toast.timer = setTimeout(() => { el.hidden = true; }, 3000);
+        }
+
+        async function api(method, path, body) {
+            const resp = await fetch(path, {
+                method,
+                headers: body ? { 'Content-Type': 'application/json' } : {},
+                body: body ? JSON.stringify(body) : undefined,
+            });
+            const data = await resp.json().catch(() => ({}));
+            if (!resp.ok) throw new Error(data.error || resp.statusText);
+            if (data.queue) render(data);
+            return data;
+        }
+
+        function element(tag, className, text) {
+            const el = document.createElement(tag);
+            if (className) el.className = className;
+            if (text !== undefined) el.textContent = text;
+            return el;
+        }
+
+        function setCover(img, src) {
+            img.hidden = !src;
+            if (src && img.getAttribute('src') !== src) img.src = src;
+        }
+
+        function cover(src) {
+            const img = element('img', 'cover');
+            img.alt = '';
+            if (src) img.src = src;
+            return img;
+        }
+
+        function songText(title, sub) {
+            const block = element('div', 'song-text');
+            block.append(element('div', 'song-title', title), element('div', 'song-sub', sub));
+            return block;
+        }
+
+        function badge(status) {
+            const [label, cls] = STATUS[status] || [status, ''];
+            return element('span', 'badge ' + cls, label);
+        }
+
+        function iconButton(label, title, onClick) {
+            const button = element('button', 'icon-btn', label);
+            button.title = title;
+            button.addEventListener('click', () => onClick().catch(e => toast(e.message, true)));
+            return button;
+        }
+
+        function createLevelSlider(level, onInput) {
+            const input = element('input');
+            input.type = 'range';
+            input.min = state.mix.mute_db;
+            input.max = state.mix.max_db;
+            input.step = 1;
+            input.id = `level-${level}-${Math.random().toString(36).slice(2, 8)}`;
+            input.setAttribute('list', 'db-ticks');
+
+            const label = element('label', null, LEVEL_LABELS[level]);
+            label.htmlFor = input.id;
+            const value = element('span', 'value');
+            const row = element('div', 'row');
+            row.append(label, input, value);
+
+            let touched = 0;
+            input.addEventListener('input', () => {
+                touched = Date.now();
+                value.textContent = formatDb(+input.value);
+                onInput(+input.value);
+            });
+
+            return {
+                row,
+                set(db, force) {
+                    if (force || Date.now() - touched > SLIDER_GRACE_MS) {
+                        input.value = db;
+                        value.textContent = formatDb(db);
+                    }
+                },
+            };
+        }
+
+        function createModePicker(container, compact, onSelect) {
+            const buttons = new Map();
+            for (const mode of MODES) {
+                const button = element('button', compact ? 'mode compact' : 'mode');
+                button.type = 'button';
+                button.title = mode.text;
+                button.append(element('span', 'mode-icon', mode.icon), element('span', 'mode-name', mode.name));
+                if (!compact) button.append(element('span', 'mode-text', mode.text));
+                button.addEventListener('click', () => onSelect(mode.id));
+                buttons.set(mode.id, button);
+                container.append(button);
+            }
+            return {
+                select(id) {
+                    buttons.forEach((button, mode) => button.classList.toggle('selected', mode === id));
+                },
+                disable(ids) {
+                    buttons.forEach((button, mode) => { button.disabled = ids.includes(mode); });
+                },
+            };
+        }
+
+        // --- Search ---
+
+        async function runSearch() {
+            const query = $('search').value.trim();
+            searchAbort?.abort();
+            if (query.length < 2) {
+                hideResults();
+                return;
+            }
+
+            searchAbort = new AbortController();
+            try {
+                const resp = await fetch('/api/search?q=' + encodeURIComponent(query), { signal: searchAbort.signal });
+                const data = await resp.json();
+                if ($('search').value.trim() !== query) return;
+                results = data.results;
+                activeResult = -1;
+                renderResults(data.error);
+            } catch (e) {
+                if (e.name !== 'AbortError') {
+                    results = [];
+                    renderResults('Search failed');
+                }
+            }
+        }
+
+        function renderResults(error) {
+            const list = $('results');
+            list.replaceChildren();
+
+            results.forEach((song, i) => {
+                const li = element('li', 'result' + (i === activeResult ? ' active' : ''));
+                li.append(cover(song.cover_small), songText(song.title, `${song.artist} · ${formatTime(song.duration)}`));
+                if (song.ready) li.append(badge('ready'));
+                const match = LYRICS_MATCH[song.lyrics_match];
+                if (match) {
+                    const note = element('span', 'badge ' + match[1], match[0]);
+                    note.title = match[2];
+                    li.append(note);
+                }
+                li.addEventListener('click', () => openDialog(song));
+                list.append(li);
+            });
+
+            if (!results.length) {
+                list.append(element('li', 'results-note', error || 'No songs found'));
+            }
+            list.hidden = false;
+        }
+
+        function hideResults() {
+            $('results').hidden = true;
+        }
+
+        $('search').addEventListener('input', () => {
+            clearTimeout(searchTimer);
+            searchTimer = setTimeout(runSearch, 250);
+        });
+
+        $('search').addEventListener('focus', () => {
+            if (results.length) $('results').hidden = false;
+        });
+
+        $('search').addEventListener('keydown', e => {
+            if ((e.key === 'ArrowDown' || e.key === 'ArrowUp') && results.length) {
+                e.preventDefault();
+                const step = e.key === 'ArrowDown' ? 1 : -1;
+                activeResult = (activeResult + step + results.length) % results.length;
+                renderResults();
+            } else if (e.key === 'Enter') {
+                const song = results[activeResult] || results[0];
+                if (song) openDialog(song);
+            } else if (e.key === 'Escape') {
+                hideResults();
+            }
+        });
+
+        document.addEventListener('click', e => {
+            if (!e.target.closest('.search')) hideResults();
+        });
+
+        // --- Queue dialog: pick how the song should be played ---
+
+        const dialogPicker = createModePicker($('dialog-modes'), false, setDialogMode);
+
+        function openDialog(song) {
+            if (!state) return;
+            hideResults();
+            dialogSong = song;
+            setCover($('dialog-cover'), song.cover || song.cover_small);
+            $('dialog-title').textContent = song.title;
+            const match = LYRICS_MATCH[song.lyrics_match];
+            $('dialog-sub').textContent = `${song.artist} · ${formatTime(song.duration)}${song.ready ? ' · Ready to sing' : ''}`
+                + (match ? ` · ${match[2]}` : '');
+            $('dialog-advanced').open = false;
+            setDialogMode('karaoke');
+            $('dialog').hidden = false;
+            $('dialog-add').focus();
+        }
+
+        function closeDialog() {
+            $('dialog').hidden = true;
+            dialogSong = null;
+        }
+
+        function setDialogMode(mode) {
+            dialogMix = { mode, ...state.mix.presets[mode] };
+            dialogPicker.select(mode);
+            $('dialog-custom').textContent = '';
+
+            const box = $('dialog-levels');
+            box.replaceChildren();
+            for (const level of levelsFor(mode)) {
+                const slider = createLevelSlider(level, db => {
+                    dialogMix[level] = db;
+                    if (dialogMix.mode !== 'boring') {
+                        dialogMix.mode = 'custom';
+                        dialogPicker.select('custom');
+                        $('dialog-custom').textContent = '· Custom mix';
+                    }
+                });
+                slider.set(dialogMix[level], true);
+                box.append(slider.row);
+            }
+        }
+
+        $('dialog-cancel').addEventListener('click', closeDialog);
+
+        $('dialog').addEventListener('click', e => {
+            if (e.target === $('dialog')) closeDialog();
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key !== 'Escape') return;
+            if (!$('dialog').hidden) closeDialog();
+            if (IS_ADMIN && !$('lyrics-dialog').hidden) closeLyrics();
+        });
+
+        $('dialog-add').addEventListener('click', async () => {
+            const song = dialogSong;
+            const mix = dialogMix;
+            closeDialog();
+            $('search').value = '';
+            results = [];
+            try {
+                await api('POST', '/api/queue', { deezer_id: song.deezer_id, ...mix });
+                toast(`Added: ${song.title} (${modeLabel(mix)})`);
+                refresh();
+            } catch (e) {
+                toast(`Could not add song: ${e.message}`, true);
+            }
+        });
+
+        // --- Admin: playback and live mix ---
+
+        const pending = { settings: {}, mix: {} };
+        const pendingTimers = {};
+        let mixerPicker = null;
+        let mixerSliders = {};
+        let mixerSignature = null;
+        let keyOptionsFor = null;
+
+        function send(kind, values, delay = 120) {
+            Object.assign(pending[kind] ??= {}, values);
+            clearTimeout(pendingTimers[kind]);
+            pendingTimers[kind] = setTimeout(() => {
+                const body = pending[kind];
+                pending[kind] = {};
+                api('POST', '/api/' + kind, body).catch(e => toast(e.message, true));
+            }, delay);
+        }
+
+        // --- Admin: lyrics editor ---
+
+        let lyricsSong = null;
+
+        function lyricsSourceText(data) {
+            if (data.status !== 'ok') return 'No lyrics found, paste them below';
+            const source = data.source === 'libretto' ? `${data.work}, No. ${(data.movements || []).join(', ')}`
+                : data.source === 'manual' ? 'Pasted lyrics'
+                : 'LRCLIB';
+            return `${source} · ${data.aligned ? 'synced' : 'not synced yet'}`;
+        }
+
+        async function openLyrics(item) {
+            lyricsSong = item;
+            $('lyrics-title').textContent = item.title;
+            $('lyrics-source').textContent = 'Loading...';
+            $('lyrics-text').value = '';
+            $('lyrics-dialog').hidden = false;
+            try {
+                const data = await api('GET', '/api/lyrics/' + encodeURIComponent(item.key));
+                if (lyricsSong !== item) return;
+                $('lyrics-text').value = (data.lines || []).join('\n');
+                $('lyrics-source').textContent = lyricsSourceText(data);
+                $('lyrics-text').focus();
+            } catch (e) {
+                $('lyrics-source').textContent = e.message;
+            }
+        }
+
+        function closeLyrics() {
+            $('lyrics-dialog').hidden = true;
+            lyricsSong = null;
+        }
+
+        if (IS_ADMIN) {
+            $('btn-lyrics').addEventListener('click', () => state?.current && openLyrics(state.current));
+            $('lyrics-cancel').addEventListener('click', closeLyrics);
+            $('lyrics-dialog').addEventListener('click', e => {
+                if (e.target === $('lyrics-dialog')) closeLyrics();
+            });
+            $('lyrics-save').addEventListener('click', async () => {
+                const song = lyricsSong;
+                const text = $('lyrics-text').value;
+                closeLyrics();
+                try {
+                    await api('POST', '/api/lyrics/' + encodeURIComponent(song.key), { text });
+                    toast(`Lyrics saved for ${song.title}, syncing...`);
+                } catch (e) {
+                    toast(`Could not save lyrics: ${e.message}`, true);
+                }
+            });
+        }
+
+        function lyricsOffset() {
+            return pending.settings.lyrics_offset ?? state.settings.lyrics_offset;
+        }
+
+        if (IS_ADMIN) {
+            mixerPicker = createModePicker($('mixer-modes'), true, mode => send('mix', { mode }, 0));
+
+            $('offset-earlier').addEventListener('click', () => send('settings', { lyrics_offset: Math.round((lyricsOffset() - 0.1) * 10) / 10 }));
+            $('offset-later').addEventListener('click', () => send('settings', { lyrics_offset: Math.round((lyricsOffset() + 0.1) * 10) / 10 }));
+            $('key').addEventListener('change', () => send('settings', { key: $('key').value || null }, 0));
+
+            for (const [id, action] of [['btn-restart', 'restart'], ['btn-toggle', 'toggle'], ['btn-skip', 'skip']]) {
+                $(id).addEventListener('click', () => api('POST', '/api/player/' + action).catch(e => toast(e.message, true)));
+            }
+        }
+
+        // --- Rendering ---
+
+        function renderInvite() {
+            // The QR of the public guest page, for printing or holding up to the room.
+            const invite = $('invite-pill');
+            if (!invite) return;
+            invite.hidden = !state.guest_url;
+            invite.title = state.guest_url || '';
+        }
+
+        function renderPlayerPill(player) {
+            const pill = $('player-pill');
+            const guests = state.guest_url || `http://${location.hostname}:${state.guest_port}`;
+            pill.title = `Player: http://${location.hostname}:${state.player_port} · Guests: ${guests}`;
+            // In the split setup the hub is another machine, so its absence comes first.
+            if (state.hub_connected === false) {
+                pill.textContent = `Hub offline (${Math.round(state.hub_state_age || 0)}s)`;
+                pill.className = 'pill warn';
+            } else if (!player.connected) {
+                pill.textContent = 'Player not open';
+                pill.className = 'pill warn';
+            } else if (!player.unlocked) {
+                pill.textContent = 'Press Space on player';
+                pill.className = 'pill warn';
+            } else {
+                pill.textContent = 'Player connected';
+                pill.className = 'pill ok';
+            }
+        }
+
+        function renderNowPlaying(current, player) {
+            setCover($('now-cover'), current?.cover);
+
+            if (current) {
+                const waiting = current.status === 'ready' && !state.started;
+                $('now-title').textContent = current.title;
+                $('now-sub').textContent = current.status !== 'ready'
+                    ? `${current.artist} · ${STATUS[current.status]?.[0] || current.status}...`
+                    : `${current.artist} · ${modeLabel(current.mix)}${waiting ? ' · waiting for start' : ''}`;
+            } else {
+                $('now-title').textContent = 'Nothing playing';
+                $('now-sub').textContent = 'Search for a song to start';
+            }
+
+            const onPlayer = current && player.item_id === current.id;
+            const position = onPlayer ? player.position : 0;
+            const duration = (onPlayer && player.duration) || current?.duration || 0;
+            $('now-progress').style.width = duration ? Math.min(100, position / duration * 100) + '%' : '0';
+            $('now-position').textContent = formatTime(position);
+            $('now-duration').textContent = formatTime(duration);
+
+            if (IS_ADMIN) {
+                $('btn-toggle').textContent = state.paused || !state.started ? '▶' : '⏸';
+                for (const id of ['btn-restart', 'btn-toggle', 'btn-skip', 'btn-lyrics']) {
+                    $(id).disabled = !current;
+                }
+            }
+        }
+
+        function renderMixer(current, settings) {
+            const mix = current?.mix;
+            mixerPicker.select(mix?.mode);
+            mixerPicker.disable(current ? [] : MODES.map(m => m.id));
+
+            const levels = mix ? levelsFor(mix.mode) : [];
+            const signature = (current?.id || '') + '|' + levels.join();
+            if (signature !== mixerSignature) {
+                mixerSignature = signature;
+                mixerSliders = {};
+                $('mixer-levels').replaceChildren();
+                for (const level of levels) {
+                    mixerSliders[level] = createLevelSlider(level, db => send('mix', { [level]: db }));
+                    mixerSliders[level].set(mix[level], true);
+                    $('mixer-levels').append(mixerSliders[level].row);
+                }
+            }
+            for (const [level, slider] of Object.entries(mixerSliders)) {
+                slider.set(mix[level]);
+            }
+
+            const note = current ? '' : 'Nothing is playing.';
+            $('mixer-note').textContent = note;
+            $('mixer-note').hidden = !note;
+
+            const offset = settings.lyrics_offset;
+            $('offset-value').textContent = (offset > 0 ? '+' : '') + offset.toFixed(1) + 's';
+
+            const select = $('key');
+            const keySignature = (current?.id || '') + '|' + (current?.scale || '');
+            if (keySignature !== keyOptionsFor) {
+                keyOptionsFor = keySignature;
+                select.replaceChildren(new Option(current?.scale ? `Auto (${current.scale})` : 'Auto', ''));
+                MAJOR_KEYS.forEach((key, i) => select.append(new Option(`${key} / ${MINOR_KEYS[i]}`, key)));
+            }
+            select.disabled = !current;
+            if (document.activeElement !== select) {
+                select.value = settings.key || '';
+            }
+        }
+
+        let presetControls = null;
+
+        function renderPresets(mix) {
+            if (!presetControls) {
+                presetControls = {};
+                for (const mode of MODES) {
+                    const sliders = {};
+                    const reset = element('button', 'preset-reset', 'Reset');
+                    reset.type = 'button';
+                    reset.title = `Reset ${mode.name} to the default levels`;
+                    reset.addEventListener('click', () => {
+                        const defaults = state.mix.defaults[mode.id];
+                        Object.entries(sliders).forEach(([level, slider]) => slider.set(defaults[level], true));
+                        send('presets/' + mode.id, defaults, 0);
+                    });
+
+                    const head = element('div', 'preset-head');
+                    head.append(element('span', 'mode-name', `${mode.icon} ${mode.name}`), reset);
+                    const group = element('div', 'preset');
+                    group.append(head);
+                    for (const level of levelsFor(mode.id)) {
+                        sliders[level] = createLevelSlider(level, db => send('presets/' + mode.id, { [level]: db }));
+                        group.append(sliders[level].row);
+                    }
+                    $('preset-levels').append(group);
+                    presetControls[mode.id] = { sliders, reset };
+                }
+            }
+
+            for (const [mode, { sliders, reset }] of Object.entries(presetControls)) {
+                const levels = Object.keys(sliders);
+                levels.forEach(level => sliders[level].set(mix.presets[mode][level]));
+                reset.disabled = levels.every(level => mix.presets[mode][level] === mix.defaults[mode][level]);
+            }
+        }
+
+        function renderQueue(queue) {
+            const signature = JSON.stringify(queue.map(item => [item.id, item.status, item.error, item.mix.mode]));
+            if (signature === queueSignature) return;
+            queueSignature = signature;
+
+            const list = $('queue');
+            list.replaceChildren();
+            if (!queue.length) {
+                list.append(element('li', 'empty', 'Queue is empty'));
+                return;
+            }
+
+            queue.forEach((item, i) => {
+                const li = element('li', 'queue-item');
+                const sub = `${item.artist} · ${modeLabel(item.mix)}` + (item.error ? ` · ${item.error}` : '');
+                li.append(cover(item.cover_small), songText(item.title, sub), badge(item.status));
+                if (IS_ADMIN) {
+                    li.append(iconButton('📝', 'Edit lyrics', () => openLyrics(item)));
+                    if (i > 0) {
+                        li.append(iconButton('⤒', 'Play next', () => api('POST', `/api/queue/${item.id}/next`)));
+                    }
+                    li.append(iconButton('✕', 'Remove', () => api('DELETE', `/api/queue/${item.id}`)));
+                }
+                list.append(li);
+            });
+        }
+
+        function render(newState) {
+            state = newState;
+
+            if (lastErrorId === undefined) {
+                lastErrorId = state.last_error?.id || null;
+            } else if (state.last_error && state.last_error.id !== lastErrorId) {
+                lastErrorId = state.last_error.id;
+                toast(`Skipped ${state.last_error.title}: ${state.last_error.error}`, true);
+            }
+
+            renderNowPlaying(state.current, state.player);
+            renderQueue(state.queue);
+            if (IS_ADMIN) {
+                renderPlayerPill(state.player);
+                renderInvite();
+                renderMixer(state.current, state.settings);
+                renderPresets(state.mix);
+            }
+        }
+
+        function showPillError(text) {
+            if (!IS_ADMIN) return;
+            $('player-pill').textContent = text;
+            $('player-pill').className = 'pill warn';
+        }
+
+        async function refresh() {
+            try {
+                const data = await (await fetch('/api/state')).json();
+                // A node that cannot use the hub answers with a reason instead of a state;
+                // saying why beats a bare "offline" when it is a token or a wrong address.
+                if (!data.queue) return showPillError(data.error || 'Server offline');
+                render(data);
+            } catch (e) {
+                showPillError('Server offline');
+            }
+        }
+
+        refresh();
+        setInterval(refresh, 1000);
+    </script>
+</body>
+
+</html>

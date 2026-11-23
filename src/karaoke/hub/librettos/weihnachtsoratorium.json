@@ -1,0 +1,874 @@
+{
+ "work": "Weihnachtsoratorium",
+ "composer": "Johann Sebastian Bach",
+ "catalog": "BWV 248",
+ "source": "https://www.bach-cantatas.com/Texts/BWV248-1-Eng3P.htm (parts 1-6)",
+ "title_patterns": [
+  "BWV\\s*248",
+  "Weihnachts-?\\s*[Oo]ratorium",
+  "Christmas Oratorio"
+ ],
+ "movements": [
+  {
+   "number": "1",
+   "part": 1,
+   "kind": "Coro",
+   "lines": [
+    "Jauchzet, frohlocket! auf, preiset die Tage,",
+    "Rühmet, was heute der Höchste getan!",
+    "Lasset das Zagen, verbannet die Klage,",
+    "Stimmet voll Jauchzen und Fröhlichkeit an!",
+    "Dienet dem Höchsten mit herrlichen Chören,",
+    "Laßt uns den Namen des Herrschers verehren!"
+   ]
+  },
+  {
+   "number": "2",
+   "part": 1,
+   "kind": "Recitativo T",
+   "lines": [
+    "Es begab sich aber zu der Zeit,",
+    "dass ein Gebot von dem Kaiser Augusto ausging,",
+    "dass alle Welt geschätzet würde.",
+    "Und jedermann ging, dass er sich schätzen ließe,",
+    "ein jeglicher in seine Stadt.",
+    "Da machte sich auch auf Joseph aus Galiläa,",
+    "aus der Stadt Nazareth, in das jüdische Land zur Stadt David,",
+    "die da heißet Bethlehem;",
+    "darum, dass er von dem Hause und Geschlechte David war:",
+    "auf dass er sich schätzen ließe mit Maria,",
+    "seinem vertrauten Weibe, die war schwanger.",
+    "Und als sie daselbst waren, kam die Zeit, dass sie gebären sollte."
+   ]
+  },
+  {
+   "number": "3",
+   "part": 1,
+   "kind": "Recitativo A",
+   "lines": [
+    "Nun wird mein liebster Bräutigam,",
+    "Nun wird der Held aus Davids Stamm",
+    "Zum Trost, zum Heil der Erden",
+    "Einmal geboren werden.",
+    "Nun wird der Stern aus Jakob scheinen,",
+    "Sein Strahl bricht schon hervor.",
+    "Auf, Zion, und verlasse nun das Weinen,",
+    "Dein Wohl steigt hoch empor!"
+   ]
+  },
+  {
+   "number": "4",
+   "part": 1,
+   "kind": "Aria A",
+   "lines": [
+    "Bereite dich, Zion, mit zärtlichen Trieben,",
+    "Den Schönsten, den Liebsten bald bei dir zu sehn!",
+    "Deine Wangen",
+    "Müssen heut viel schöner prangen,",
+    "Eile, den Bräutigam sehnlichst zu lieben!"
+   ]
+  },
+  {
+   "number": "5",
+   "part": 1,
+   "kind": "Choral",
+   "lines": [
+    "Wie soll ich dich empfangen",
+    "Und wie begegn' ich dir?",
+    "O aller Welt Verlangen,",
+    "O meiner Seelen Zier!",
+    "O Jesu, Jesu, setze",
+    "Mir selbst die Fackel bei,",
+    "Damit, was dich ergötze,",
+    "Mir kund und wissend sei!"
+   ]
+  },
+  {
+   "number": "6",
+   "part": 1,
+   "kind": "Recitativo T",
+   "lines": [
+    "Und sie gebar ihren ersten Sohn",
+    "und wickelte ihn in Windeln und legte ihn in eine Krippen,",
+    "denn sie hatten sonst keinen Raum in der Herberge."
+   ]
+  },
+  {
+   "number": "7",
+   "part": 1,
+   "kind": "Choral S e Recitativo B",
+   "lines": [
+    "Er ist auf Erden kommen arm,",
+    "Wer will die Liebe recht erhöhn,",
+    "Die unser Heiland vor uns hegt?",
+    "Dass er unser sich erbarm,",
+    "Ja, wer vermag es einzusehen,",
+    "Wie ihn der Menschen Leid bewegt?",
+    "Und in dem Himmel mache reich,",
+    "Des Höchsten Sohn kömmt in die Welt,",
+    "Weil ihm ihr Heil so wohl gefällt,",
+    "Und seinen lieben Engeln gleich.",
+    "So will er selbst als Mensch geboren werden.",
+    "Kyrieleis!"
+   ]
+  },
+  {
+   "number": "8",
+   "part": 1,
+   "kind": "Aria B",
+   "lines": [
+    "Großer Herr, o starker König,",
+    "Liebster Heiland, o wie wenig",
+    "Achtest du der Erden Pracht!",
+    "Der die ganze Welt erhält,",
+    "Ihre Pracht und Zier erschaffen,",
+    "Muss in harten Krippen schlafen."
+   ]
+  },
+  {
+   "number": "9",
+   "part": 1,
+   "kind": "Choral",
+   "lines": [
+    "Ach mein herzliebes Jesulein,",
+    "Mach dir ein rein sanft Bettelein,",
+    "Zu ruhn in meines Herzens Schrein,",
+    "Dass ich nimmer vergesse dein!"
+   ]
+  },
+  {
+   "number": "10",
+   "part": 2,
+   "kind": "Sinfonia",
+   "lines": []
+  },
+  {
+   "number": "11",
+   "part": 2,
+   "kind": "Recitativo T",
+   "lines": [
+    "Und es waren Hirten in derselben Gegend",
+    "auf dem Felde bei den Hürden,",
+    "die hüteten des Nachts ihre Herde.",
+    "Und siehe, des Herren Engel trat zu ihnen,",
+    "und die Klarheit des Herren leuchtet um sie,",
+    "und sie furchten sich sehr."
+   ]
+  },
+  {
+   "number": "12",
+   "part": 2,
+   "kind": "Choral",
+   "lines": [
+    "Brich an, o schönes Morgenlicht,",
+    "Und lass den Himmel tagen!",
+    "Du Hirtenvolk, erschrecke nicht,",
+    "Weil dir die Engel sagen,",
+    "Dass dieses schwache Knäbelein",
+    "Soll unser Trost und Freude sein,",
+    "Dazu den Satan zwingen",
+    "Und letztlich Friede bringen!"
+   ]
+  },
+  {
+   "number": "13",
+   "part": 2,
+   "kind": "Recitativo T S - Evangelist (T), Engel (S)",
+   "lines": [
+    "Und der Engel sprach zu ihnen:",
+    "Fürchtet euch nicht,",
+    "siehe, ich verkündige euch große Freude,",
+    "die allem Volke widerfahren wird.",
+    "Denn euch ist heute der Heiland geboren,",
+    "welcher ist Christus,",
+    "der Herr, in der Stadt David."
+   ]
+  },
+  {
+   "number": "14",
+   "part": 2,
+   "kind": "Recitativo B",
+   "lines": [
+    "Was Gott dem Abraham verheißen,",
+    "Das lässt er nun dem Hirtenchor",
+    "Erfüllt erweisen.",
+    "Ein Hirt hat alles das zuvor",
+    "Von Gott erfahren müssen.",
+    "Und nun muss auch ein Hirt die Tat,",
+    "Was er damals versprochen hat,",
+    "Zuerst erfüllet wissen."
+   ]
+  },
+  {
+   "number": "15",
+   "part": 2,
+   "kind": "Aria T",
+   "lines": [
+    "Frohe Hirten, eilt, ach eilet,",
+    "Eh ihr euch zu lang verweilet,",
+    "Eilt, das holde Kind zu sehn!",
+    "Geht, die Freude heißt zu schön,",
+    "Sucht die Anmut zu gewinnen,",
+    "Geht und labet Herz und Sinnen!"
+   ]
+  },
+  {
+   "number": "16",
+   "part": 2,
+   "kind": "Recitativo T",
+   "lines": [
+    "Und das habt zum Zeichen:",
+    "Ihr werdet finden das Kind in Windeln gewickelt und in einer Krippe liegen."
+   ]
+  },
+  {
+   "number": "17",
+   "part": 2,
+   "kind": "Choral",
+   "lines": [
+    "Schaut hin, dort liegt im finstern Stall,",
+    "Des Herrschaft gehet überall!",
+    "Da Speise vormals sucht ein Rind,",
+    "Da ruhet itzt der Jungfrau'n Kind."
+   ]
+  },
+  {
+   "number": "18",
+   "part": 2,
+   "kind": "Recitativo B",
+   "lines": [
+    "So geht denn hin, ihr Hirten, geht,",
+    "Dass ihr das Wunder seht:",
+    "Und findet ihr des Höchsten Sohn",
+    "In einer harten Krippe liegen,",
+    "So singet ihm bei seiner Wiegen",
+    "Aus einem süßen Ton",
+    "Und mit gesamtem Chor",
+    "Dies Lied zur Ruhe vor!"
+   ]
+  },
+  {
+   "number": "19",
+   "part": 2,
+   "kind": "Aria A",
+   "lines": [
+    "Schlafe, mein Liebster, genieße der Ruh,",
+    "Wache nach diesem vor aller Gedeihen!",
+    "Labe die Brust,",
+    "Empfinde die Lust,",
+    "Wo wir unser Herz erfreuen!"
+   ]
+  },
+  {
+   "number": "20",
+   "part": 2,
+   "kind": "Recitativo T",
+   "lines": [
+    "Und alsobald war da bei dem Engel",
+    "die Menge der himmlischen Heerscharen,",
+    "die lobten Gott und sprachen"
+   ]
+  },
+  {
+   "number": "21",
+   "part": 2,
+   "kind": "Coro",
+   "lines": [
+    "Ehre sei Gott in der Höhe",
+    "und Friede auf Erden",
+    "und den Menschen ein Wohlgefallen."
+   ]
+  },
+  {
+   "number": "22",
+   "part": 2,
+   "kind": "Recitativo B",
+   "lines": [
+    "So recht, ihr Engel, jauchzt und singet,",
+    "Dass es uns heut so schön gelinget!",
+    "Auf denn! wir stimmen mit euch ein,",
+    "Uns kann es so wie euch erfreun."
+   ]
+  },
+  {
+   "number": "23",
+   "part": 2,
+   "kind": "Choral",
+   "lines": [
+    "Wir singen dir in deinem Heer",
+    "Aus aller Kraft, Lob, Preis und Ehr,",
+    "Dass du, o lang gewünschter Gast,",
+    "Dich nunmehr eingestellet hast.",
+    "Fromme Musen! meine Glieder!",
+    "Singt nicht längst bekannte Lieder!",
+    "Dieser Tag sei eure Lust!",
+    "Füllt mit Freuden eure Brust!",
+    "Werft so Kiel als Schriften nieder",
+    "Und erfreut euch dreimal wieder!",
+    "Schlafe, mein Liebster, und pflege der Ruh,",
+    "Folge der Lockung entbrannter Gedanken.",
+    "Schmecke die Lust",
+    "Der lüsternen Brust",
+    "Und erkenne keine Schranken."
+   ]
+  },
+  {
+   "number": "24",
+   "part": 3,
+   "kind": "Coro",
+   "lines": [
+    "Herrscher des Himmels, erhöre das Lallen,",
+    "Laß dir die matten Gesänge gefallen,",
+    "Wenn dich dein Zion mit Psalmen erhöht!",
+    "Höre der Herzen frohlockendes Preisen,",
+    "Wenn wir dir itzo die Ehrfurcht erweisen,",
+    "Weil unsre Wohlfahrt befestiget steht!"
+   ]
+  },
+  {
+   "number": "25",
+   "part": 3,
+   "kind": "Recitativo T",
+   "lines": [
+    "Und da die Engel von ihnen gen Himmel fuhren,",
+    "sprachen die Hirten untereinander:"
+   ]
+  },
+  {
+   "number": "26",
+   "part": 3,
+   "kind": "Coro",
+   "lines": [
+    "Lasset uns nun gehen gen Bethlehem",
+    "und die Geschichte sehen, die da geschehen ist,",
+    "die uns der Herr kundgetan hat."
+   ]
+  },
+  {
+   "number": "27",
+   "part": 3,
+   "kind": "Recitativo B",
+   "lines": [
+    "Er hat sein Volk getröst',",
+    "Er hat sein Israel erlöst,",
+    "Die Hülf aus Zion hergesendet",
+    "Und unser Leid geendet.",
+    "Seht, Hirten, dies hat er getan;",
+    "Geht, dieses trefft ihr an!"
+   ]
+  },
+  {
+   "number": "28",
+   "part": 3,
+   "kind": "Choral",
+   "lines": [
+    "Dies hat er alles uns getan,",
+    "Sein groß Lieb zu zeigen an;",
+    "Des freu sich alle Christenheit",
+    "Und dank ihm des in Ewigkeit.",
+    "Kyrieleis!"
+   ]
+  },
+  {
+   "number": "29",
+   "part": 3,
+   "kind": "Aria (Duetto) S B",
+   "lines": [
+    "Herr, dein Mitleid, dein Erbarmen",
+    "Tröstet uns und macht uns frei.",
+    "Deine holde Gunst und Liebe,",
+    "Deine wundersamen Triebe",
+    "Machen deine Vatertreu",
+    "Wieder neu."
+   ]
+  },
+  {
+   "number": "30",
+   "part": 3,
+   "kind": "Recitativo T",
+   "lines": [
+    "Und sie kamen eilend und funden beide, Mariam und Joseph,",
+    "dazu das Kind in der Krippe liegen.",
+    "Da sie es aber gesehen hatten,",
+    "breiteten sie das Wort aus,",
+    "welches zu ihnen von diesem Kind gesaget war.",
+    "Und alle, für die es kam, wunderten sich der Rede,",
+    "die ihnen die Hirten gesaget hatten.",
+    "Maria aber behielt alle diese Worte",
+    "und bewegte sie in ihrem Herzen."
+   ]
+  },
+  {
+   "number": "31",
+   "part": 3,
+   "kind": "Aria A",
+   "lines": [
+    "Schließe, mein Herze, dies selige Wunder",
+    "Fest in deinem Glauben ein!",
+    "Lasse dies Wunder, die göttlichen Werke,",
+    "Immer zur Stärke",
+    "Deines schwachen Glaubens sein!"
+   ]
+  },
+  {
+   "number": "32",
+   "part": 3,
+   "kind": "Recitativo A",
+   "lines": [
+    "Ja, ja, mein Herz soll es bewahren,",
+    "Was es an dieser holden Zeit",
+    "Zu seiner Seligkeit",
+    "Für sicheren Beweis erfahren."
+   ]
+  },
+  {
+   "number": "33",
+   "part": 3,
+   "kind": "Choral",
+   "lines": [
+    "Ich will dich mit Fleiß bewahren,",
+    "Ich will dir",
+    "Leben hier,",
+    "Dir will ich abfahren,",
+    "Mit dir will ich endlich schweben",
+    "Voller Freud",
+    "Ohne Zeit",
+    "Dort im andern Leben."
+   ]
+  },
+  {
+   "number": "34",
+   "part": 3,
+   "kind": "Recitativo T",
+   "lines": [
+    "Und die Hirten kehrten wieder um,",
+    "preiseten und lobten Gott um alles,",
+    "das sie gesehen und gehöret hatten,",
+    "wie denn zu ihnen gesaget war."
+   ]
+  },
+  {
+   "number": "35",
+   "part": 3,
+   "kind": "Choral",
+   "lines": [
+    "Seid froh dieweil,",
+    "Dass euer Heil",
+    "Ist hie ein Gott und auch ein Mensch geboren,",
+    "Der, welcher ist",
+    "Der Herr und Christ",
+    "In Davids Stadt, von vielen auserkoren."
+   ]
+  },
+  {
+   "number": "36",
+   "part": 4,
+   "kind": "Coro",
+   "lines": [
+    "Fallt mit Danken, fallt mit Loben",
+    "Vor des Höchsten Gnadenthron!",
+    "Gottes Sohn",
+    "Will der Erden",
+    "Heiland und Erlöser werden,",
+    "Gottes Sohn",
+    "Dämpft der Feinde Wut und Toben."
+   ]
+  },
+  {
+   "number": "37",
+   "part": 4,
+   "kind": "Recitativo T",
+   "lines": [
+    "Und da acht Tage um waren,",
+    "dass das Kind beschnitten würde,",
+    "da ward sein Name genennet Jesus,",
+    "welcher genennet war von dem Engel,",
+    "ehe denn er im Mutterleibe empfangen ward."
+   ]
+  },
+  {
+   "number": "38",
+   "part": 4,
+   "kind": "Recitativo B e Choral S",
+   "lines": [
+    "Immanuel, o süßes Wort!",
+    "Mein Jesus heißt mein Hort,",
+    "Mein Jesus heißt mein Leben.",
+    "Mein Jesus hat sich mir ergeben,",
+    "Mein Jesus soll mir immerfort",
+    "Vor meinen Augen schweben.",
+    "Mein Jesus heißet meine Lust,",
+    "Mein Jesus labet Herz und Brust.",
+    "Jesu, du mein liebstes Leben,",
+    "Meiner Seelen Bräutigam,",
+    "Komm! Ich will dich mit Lust umfassen,",
+    "Mein Herze soll dich nimmer lassen,",
+    "Ach! So nimm mich zu dir!",
+    "Der du dich vor mich gegeben",
+    "An des bittern Kreuzes Stamm!",
+    "Auch in dem Sterben sollst du mir",
+    "Das Allerliebste sein;",
+    "In Not, Gefahr und Ungemach",
+    "Seh ich dir sehnlichst nach.",
+    "Was jagte mir zuletzt der Tod für Grauen ein?",
+    "Mein Jesus! Wenn ich sterbe,",
+    "So weiß ich, dass ich nicht verderbe.",
+    "Dein Name steht in mir geschrieben,",
+    "Der hat des Todes Furcht vertrieben."
+   ]
+  },
+  {
+   "number": "39",
+   "part": 4,
+   "kind": "Aria S",
+   "lines": [
+    "Flößt, mein Heiland, flößt dein Namen",
+    "Auch den allerkleinsten Samen",
+    "Jenes strengen Schreckens ein?",
+    "Nein, du sagst ja selber nein. (Nein!)",
+    "Sollt ich nun das Sterben scheuen?",
+    "Nein, dein süßes Wort ist da!",
+    "Oder sollt ich mich erfreuen?",
+    "Ja, du Heiland sprichst selbst ja. (Ja!)"
+   ]
+  },
+  {
+   "number": "40",
+   "part": 4,
+   "kind": "Recitativo B e Choral S",
+   "lines": [
+    "Wohlan, dein Name soll allein",
+    "In meinem Herzen sein!",
+    "Jesu, meine Freud und Wonne,",
+    "Meine Hoffnung, Schatz und Teil,",
+    "So will ich dich entzücket nennen,",
+    "Wenn Brust und Herz zu dir vor Liebe brennen.",
+    "Mein Erlösung, Schmuck und Heil,",
+    "Hirt und König, Licht und Sonne,",
+    "Doch, Liebster, sage mir:",
+    "Wie rühm ich dich, wie dank ich dir?",
+    "Ach! wie soll ich würdiglich,",
+    "Mein Herr Jesu, preisen dich?"
+   ]
+  },
+  {
+   "number": "41",
+   "part": 4,
+   "kind": "Aria T",
+   "lines": [
+    "Ich will nur dir zu Ehren leben,",
+    "Mein Heiland, gib mir Kraft und Mut,",
+    "Dass es mein Herz recht eifrig tut!",
+    "Stärke mich,",
+    "Deine Gnade würdiglich",
+    "Und mit Danken zu erheben!"
+   ]
+  },
+  {
+   "number": "42",
+   "part": 4,
+   "kind": "Choral",
+   "lines": [
+    "Jesus richte mein Beginnen,",
+    "Jesus bleibe stets bei mir,",
+    "Jesus zäume mir die Sinnen,",
+    "Jesus sei nur mein Begier,",
+    "Jesus sei mir in Gedanken,",
+    "Jesu, lasse mich nicht wanken!",
+    "This Translation in Interlinear Format"
+   ]
+  },
+  {
+   "number": "43",
+   "part": 5,
+   "kind": "Coro",
+   "lines": [
+    "Ehre sei dir, Gott, gesungen,",
+    "Dir sei Lob und Dank bereit.",
+    "Dich erhebet alle Welt,",
+    "Weil dir unser Wohl gefällt,",
+    "Weil anheut",
+    "Unser aller Wunsch gelungen,",
+    "Weil uns dein Segen so herrlich erfreut."
+   ]
+  },
+  {
+   "number": "44",
+   "part": 5,
+   "kind": "Recitativo T",
+   "lines": [
+    "Da Jesus geboren war zu Bethlehem im jüdischen Lande zur Zeit des Königes Herodis,",
+    "siehe, da kamen die Weisen vom Morgenlande gen Jerusalem und sprachen."
+   ]
+  },
+  {
+   "number": "45",
+   "part": 5,
+   "kind": "Coro e Recitativo A",
+   "lines": [
+    "Wo ist der neugeborne König der Jüden?",
+    "Sucht ihn in meiner Brust,",
+    "Hier wohnt er, mir und ihm zur Lust!",
+    "Wir haben seinen Stern gesehen im Morgenlande und sind kommen, ihn anzubeten.",
+    "Wohl euch, die ihr dies Licht gesehen,",
+    "Es ist zu eurem Heil geschehen!",
+    "Mein Heiland, du, du bist das Licht,",
+    "Das auch den Heiden scheinen sollen,",
+    "Und sie, sie kennen dich noch nicht,",
+    "Als sie dich schon verehren wollen.",
+    "Wie hell, wie klar muss nicht dein Schein,",
+    "Geliebter Jesu, sein!"
+   ]
+  },
+  {
+   "number": "46",
+   "part": 5,
+   "kind": "Choral",
+   "lines": [
+    "Dein Glanz all Finsternis verzehrt,",
+    "Die trübe Nacht in Licht verkehrt.",
+    "Leit uns auf deinen Wegen,",
+    "Dass dein Gesicht",
+    "Und herrlichs Licht",
+    "Wir ewig schauen mögen!"
+   ]
+  },
+  {
+   "number": "47",
+   "part": 5,
+   "kind": "Aria B",
+   "lines": [
+    "Erleucht auch meine finstre Sinnen,",
+    "Erleuchte mein Herze",
+    "Durch der Strahlen klaren Schein!",
+    "Dein Wort soll mir die hellste Kerze",
+    "In allen meinen Werken sein;",
+    "Dies lässet die Seele nichts Böses beginnen."
+   ]
+  },
+  {
+   "number": "48",
+   "part": 5,
+   "kind": "Recitativo T",
+   "lines": [
+    "Da das der König Herodes hörte, erschrak er und mit ihm das ganze Jerusalem."
+   ]
+  },
+  {
+   "number": "49",
+   "part": 5,
+   "kind": "Recitativo A",
+   "lines": [
+    "Warum wollt ihr erschrecken?",
+    "Kann meines Jesu Gegenwart euch solche Furcht erwecken?",
+    "O! solltet ihr euch nicht",
+    "Vielmehr darüber freuen,",
+    "Weil er dadurch verspricht,",
+    "Der Menschen Wohlfahrt zu verneuen."
+   ]
+  },
+  {
+   "number": "50",
+   "part": 5,
+   "kind": "Recitativo T",
+   "lines": [
+    "Und ließ versammlen alle Hohepriester und Schriftgelehrten unter dem Volk",
+    "und erforschete von ihnen, wo Christus sollte geboren werden.",
+    "Und sie sagten ihm: Zu Bethlehem im jüdischen Lande;",
+    "denn also stehet geschrieben durch den Propheten:",
+    "Und du Bethlehem im jüdischen Lande bist mitnichten die kleinest unter den Fürsten Juda;",
+    "denn aus dir soll mir kommen der Herzog,",
+    "der über mein Volk Israel ein Herr sei."
+   ]
+  },
+  {
+   "number": "51",
+   "part": 5,
+   "kind": "Aria (Terzetto) S A T",
+   "lines": [
+    "Ach, wenn wird die Zeit erscheinen?",
+    "Ach, wenn kömmt der Trost der Seinen?",
+    "Schweigt, er ist schon würklich hier!",
+    "Jesu, ach so komm zu mir!"
+   ]
+  },
+  {
+   "number": "52",
+   "part": 5,
+   "kind": "Recitativo A",
+   "lines": [
+    "Mein Liebster herrschet schon.",
+    "Ein Herz, das seine Herrschaft liebet",
+    "Und sich ihm ganz zu eigen gibet,",
+    "Ist meines Jesu Thron."
+   ]
+  },
+  {
+   "number": "53",
+   "part": 5,
+   "kind": "Choral",
+   "lines": [
+    "Zwar ist solche Herzensstube",
+    "Wohl kein schöner Fürstensaal,",
+    "Sondern eine finstre Grube;",
+    "Doch, sobald dein Gnadenstrahl",
+    "In denselben nur wird blinken,",
+    "Wird es voller Sonnen dünken."
+   ]
+  },
+  {
+   "number": "54",
+   "part": 6,
+   "kind": "Coro",
+   "lines": [
+    "Herr, wenn die stolzen Feinde schnauben,",
+    "So gib, dass wir im festen Glauben",
+    "Nach deiner Macht und Hülfe sehn!",
+    "Wir wollen dir allein vertrauen,",
+    "So können wir den scharfen Klauen",
+    "Des Feindes unversehrt entgehn."
+   ]
+  },
+  {
+   "number": "55",
+   "part": 6,
+   "kind": "Recitativo T B - Evangelist (T), Herodes (B)",
+   "lines": [
+    "Da berief Herodes die Weisen heimlich",
+    "und erlernet mit Fleiß von ihnen, wenn der Stern erschienen wäre?",
+    "und weiset sie gen Bethlehem und sprach:",
+    "Ziehet hin und forschet fleißig nach dem Kindlein,",
+    "und wenn ihr's findet, sagt mir's wieder,",
+    "dass ich auch komme und es anbete."
+   ]
+  },
+  {
+   "number": "56",
+   "part": 6,
+   "kind": "Recitativo S",
+   "lines": [
+    "Du Falscher, suche nur den Herrn zu fällen,",
+    "Nimm alle falsche List,",
+    "Dem Heiland nachzustellen;",
+    "Der, dessen Kraft kein Mensch ermißt,",
+    "Bleibt doch in sichrer Hand.",
+    "Dein Herz, dein falsches Herz ist schon,",
+    "Nebst aller seiner List, des Höchsten Sohn,",
+    "Den du zu stürzen suchst, sehr wohl bekannt."
+   ]
+  },
+  {
+   "number": "57",
+   "part": 6,
+   "kind": "Aria S",
+   "lines": [
+    "Nur ein Wink von seinen Händen",
+    "Stürzt ohnmächtger Menschen Macht.",
+    "Hier wird alle Kraft verlacht!",
+    "Spricht der Höchste nur ein Wort,",
+    "Seiner Feinde Stolz zu enden,",
+    "O, so müssen sich sofort",
+    "Sterblicher Gedanken wenden."
+   ]
+  },
+  {
+   "number": "58",
+   "part": 6,
+   "kind": "Recitativo T",
+   "lines": [
+    "Als sie nun den König gehöret hatten, zogen sie hin.",
+    "Und siehe, der Stern, den sie im Morgenlande gesehen hatten,",
+    "ging für ihnen hin, bis dass er kam und stund oben über,",
+    "da das Kindlein war.",
+    "Da sie den Stern sahen, wurden sie hoch erfreuet",
+    "und gingen in das Haus und funden das Kindlein mit Maria, seiner Mutter,",
+    "und fielen nieder und beteten es an und täten ihre Schätze",
+    "auf und schenkten ihm Gold, Weihrauch und Myrrhen."
+   ]
+  },
+  {
+   "number": "59",
+   "part": 6,
+   "kind": "Choral",
+   "lines": [
+    "Ich steh an deiner Krippen hier,",
+    "O Jesulein, mein Leben;",
+    "Ich komme, bring und schenke dir,",
+    "Was du mir hast gegeben.",
+    "Nimm hin! es ist mein Geist und Sinn,",
+    "Herz, Seel und Mut, nimm alles hin,",
+    "Und lass dirs wohlgefallen!"
+   ]
+  },
+  {
+   "number": "60",
+   "part": 6,
+   "kind": "Recitativo T",
+   "lines": [
+    "Und Gott befahl ihnen im Traum, dass sie sich nicht sollten wieder zu Herodes lenken,",
+    "und zogen durch einen andern Weg wieder in ihr Land."
+   ]
+  },
+  {
+   "number": "61",
+   "part": 6,
+   "kind": "Recitativo T",
+   "lines": [
+    "So geht! Genug, mein Schatz geht nicht von hier,",
+    "Er bleibet da bei mir,",
+    "Ich will ihn auch nicht von mir lassen.",
+    "Sein Arm wird mich aus Lieb",
+    "Mit sanftmutsvollem Trieb",
+    "Und größter Zärtlichkeit umfassen;",
+    "Er soll mein Bräutigam verbleiben,",
+    "Ich will ihm Brust und Herz verschreiben.",
+    "Ich weiß gewiss, er liebet mich,",
+    "Mein Herz liebt ihn auch inniglich",
+    "Und wird ihn ewig ehren.",
+    "Was könnte mich nun für ein Feind",
+    "Bei solchem Glück versehren!",
+    "Du, Jesu, bist und bleibst mein Freund;",
+    "Und werd ich ängstlich zu dir flehn:",
+    "Herr, hilf!, so lass mich Hülfe sehn!"
+   ]
+  },
+  {
+   "number": "62",
+   "part": 6,
+   "kind": "Aria T",
+   "lines": [
+    "Nun mögt ihr stolzen Feinde schrecken;",
+    "Was könnt ihr mir für Furcht erwecken?",
+    "Mein Schatz, mein Hort ist hier bei mir.",
+    "Ihr mögt euch noch so grimmig stellen,",
+    "Droht nur, mich ganz und gar zu fällen,",
+    "Doch seht! mein Heiland wohnet hier."
+   ]
+  },
+  {
+   "number": "63",
+   "part": 6,
+   "kind": "Recitativo S A T B",
+   "lines": [
+    "Was will der Höllen Schrecken nun,",
+    "Was will uns Welt und Sünde tun,",
+    "Da wir in Jesu Händen ruhn?"
+   ]
+  },
+  {
+   "number": "64",
+   "part": 6,
+   "kind": "Choral",
+   "lines": [
+    "Nun seid ihr wohl gerochen",
+    "An eurer Feinde Schar,",
+    "Denn Christus hat zerbrochen,",
+    "Was euch zuwider war.",
+    "Tod, Teufel, Sünd und Hölle",
+    "Sind ganz und gar geschwächt;",
+    "Bei Gott hat seine Stelle",
+    "Das menschliche Geschlecht."
+   ]
+  }
+ ]
+}

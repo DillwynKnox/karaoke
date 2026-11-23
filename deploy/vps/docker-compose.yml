@@ -1,0 +1,68 @@
+# The public guest page on the VPS, joined to the tailnet by a Tailscale sidecar.
+#
+# The app container has no network of its own: it shares the sidecar's namespace, so the
+# only way out is the tailnet, and the only way in is the port published below - which your
+# existing reverse proxy terminates TLS for.
+#
+# The image is built by Woodpecker (.woodpecker.yml) and pulled from the registry, so this
+# file works as a Komodo stack as it is: paste it in (or point the stack at this path in the
+# repo) and put the variables from .env.example into the stack's environment. Every value is
+# passed through explicitly, so it does not matter which file Komodo writes them to.
+#
+# Without Komodo: cp .env.example .env, fill it in, docker compose up -d
+
+services:
+  tailscale:
+    image: tailscale/tailscale:latest
+    container_name: karaoke-tailscale
+    hostname: ${TS_HOSTNAME:-karaoke-guest}
+    environment:
+      TS_AUTHKEY: ${TS_AUTHKEY:?set TS_AUTHKEY}
+      TS_STATE_DIR: /var/lib/tailscale
+      TS_USERSPACE: "true"
+      # Userspace mode does not route the container's traffic; the app reaches the hub
+      # through this proxy (HUB_PROXY below points at it).
+      TS_OUTBOUND_HTTP_PROXY_LISTEN: localhost:1055
+      TS_EXTRA_ARGS: --hostname=${TS_HOSTNAME:-karaoke-guest}
+    volumes:
+      - tailscale-state:/var/lib/tailscale
+    ports:
+      # Only the loopback of the VPS; your reverse proxy sits in front of it.
+      - "127.0.0.1:${BIND_PORT:-8082}:8082"
+    restart: unless-stopped
+
+  guest:
+    # Registry path of the image Woodpecker pushes (registry_url/registry_image_karaoke_guest).
+    image: ${GUEST_IMAGE:?set GUEST_IMAGE, e.g. registry.example.com/karaoke-guest:latest}
+    container_name: karaoke-guest
+    environment:
+      HUB_HOST: ${HUB_HOST:?set HUB_HOST}
+      HUB_GUEST_PORT: ${HUB_GUEST_PORT:-8082}
+      HUB_TOKEN: ${HUB_TOKEN:-}
+      HUB_TIMEOUT: ${HUB_TIMEOUT:-5}
+      # Userspace Tailscale does not route container traffic, so hub calls go through its proxy.
+      HUB_PROXY: ${HUB_PROXY:-http://localhost:1055}
+      GUEST_INVITE_SECRET: ${GUEST_INVITE_SECRET:-}
+      GUEST_CODE_MINUTES: ${GUEST_CODE_MINUTES:-10}
+      GUEST_ACCESS_CODE: ${GUEST_ACCESS_CODE:-}
+      GUEST_COOKIE_SECRET: ${GUEST_COOKIE_SECRET:?set GUEST_COOKIE_SECRET}
+      GUEST_COOKIE_DAYS: ${GUEST_COOKIE_DAYS:-1}
+      GUEST_MAX_OPEN: ${GUEST_MAX_OPEN:-10}
+      GUEST_ADD_PER_MIN: ${GUEST_ADD_PER_MIN:-5}
+      GUEST_ADD_PER_HOUR: ${GUEST_ADD_PER_HOUR:-40}
+      GUEST_SEARCH_PER_MIN: ${GUEST_SEARCH_PER_MIN:-30}
+      GUEST_STATE_PER_MIN: ${GUEST_STATE_PER_MIN:-120}
+      GUEST_PROXY_HOPS: ${GUEST_PROXY_HOPS:-1}
+    # No own network stack: everything goes through the sidecar.
+    network_mode: service:tailscale
+    depends_on:
+      - tailscale
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+
+volumes:
+  tailscale-state:

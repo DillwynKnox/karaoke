@@ -1,0 +1,33 @@
+when:
+  - event: [push, pull_request, manual]
+
+steps:
+  # Lint and tests run on the base install only, i.e. exactly what the guest image carries:
+  # a guest module that starts to need torch, demucs or the like fails here.
+  - name: check
+    image: ghcr.io/astral-sh/uv:python3.13-bookworm-slim
+    environment:
+      UV_LINK_MODE: copy
+    commands:
+      - uv sync --frozen
+      - uv run ruff check src tests
+      - uv run pytest -q
+      - uv run python -c "import karaoke.guest.server, karaoke.player.server; print('nodes import without the hub extras')"
+
+  - name: publish-guest
+    image: plugins/docker
+    settings:
+      registry:
+        from_secret: registry_url
+      repo:
+        from_secret: registry_image_karaoke_guest
+      dockerfile: deploy/vps/Dockerfile
+      context: .
+      tags: latest
+      username:
+        from_secret: registry_username
+      password:
+        from_secret: registry_password
+    when:
+      - branch: main
+        event: [push, manual]

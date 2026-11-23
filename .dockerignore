@@ -1,0 +1,8 @@
+# Only pyproject.toml, uv.lock, README.md and src/ go into the guest image.
+**/__pycache__
+*.pyc
+.venv
+.git
+.env
+storage
+tests

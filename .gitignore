@@ -1,0 +1,17 @@
+# Songs, stems, lyrics, queue and the player cache
+storage/
+
+# Local settings and secrets
+.env
+
+# Python / uv
+__pycache__/
+*.py[cod]
+.venv/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+.DS_Store
